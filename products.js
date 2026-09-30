@@ -76,7 +76,7 @@ const PRODUCTS = [
     category: "lan",
     categoryName: "LAN Cable",
     price: 150,
-    unit: "মিটার",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
