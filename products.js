@@ -96,7 +96,28 @@ const PRODUCTS = [
 
   {
     id: "rj45-1",
-    name: "RJ45 Connector (Cat6)",
+    name: "Transparent RJ45 Connector (Cat6)",
+    category: "rj45",
+    categoryName: "RJ45 Connector",
+    price: 20,
+    unit: "পিস",
+    stock: true,
+    badge: "NEW",
+    description:
+      "Cat6 compatible RJ45 Connector। LAN cable termination-এর জন্য ব্যবহারযোগ্য।",
+    specs: [
+      "Cat6",
+      "High Quality",
+      "Plastic Body"
+    ],
+    images: [
+      "products/rj45-1/Transparent.jpeg",
+    ]
+  },
+
+    {
+    id: "rj45-2",
+    name: "Shielded RJ45 Connector (Cat6)",
     category: "rj45",
     categoryName: "RJ45 Connector",
     price: 10,
@@ -107,14 +128,11 @@ const PRODUCTS = [
       "Cat6 compatible RJ45 Connector। LAN cable termination-এর জন্য ব্যবহারযোগ্য।",
     specs: [
       "Cat6",
-      "8P8C",
       "High Quality",
-      "LAN Cable"
+      "Steel Body"
     ],
     images: [
-      "products/rj45-1/1.jpeg",
-      "products/rj45-1/2.jpeg",
-      "products/rj45-1/3.jpeg"
+      "products/rj45-1/Shielded.jpeg",
     ]
   },
 
