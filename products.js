@@ -132,7 +132,7 @@ const PRODUCTS = [
       "Steel Body"
     ],
     images: [
-      "products/rj45-1/Shielded.jpeg",
+      "products/rj45-2/Shielded.jpeg",
     ]
   },
 
