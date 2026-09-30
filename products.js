@@ -1,25 +1,26 @@
 const PRODUCTS = [
   {
     id: "router-1",
-    name: "TP-Link Archer C6 Dual Band WiFi Router",
+    name: "Ruijie RG-EW1200 1200M Dual Band WiFi Router",
     category: "router",
     categoryName: "রাউটার",
-    price: 1850,
+    price: 3,050,
     unit: "",
     stock: true,
     badge: "TEST",
     description:
       "দ্রুতগতির Dual Band WiFi Router। বাসা ও ছোট অফিসের জন্য উপযোগী।",
     specs: [
-      "AC1200",
-      "2.4GHz + 5GHz",
+      "Model: RG-EW1200",
+      "Transmission Rate: 1200Mbps",
+      "Frequency: 2.4 GHz, 5 GHz",
       "4 Antenna",
-      "Gigabit Port"
+      "Port: 1x WAN, 1x LAN"
     ],
     images: [
-      "products/router-1/1.jpeg",
-      "products/router-1/2.jpeg",
-      "products/router-1/3.jpeg",
+      "products/router-1/1.jpg",
+      "products/router-1/2.jpg",
+      "products/router-1/3.jpg",
       "products/router-1/4.jpeg",
       "products/router-1/5.jpeg"
     ]
