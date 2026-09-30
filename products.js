@@ -7,7 +7,7 @@ const PRODUCTS = [
     price: 3,050,
     unit: "",
     stock: true,
-    badge: "TEST",
+    badge: "NEW",
     description:
       "দ্রুতগতির Dual Band WiFi Router। বাসা ও ছোট অফিসের জন্য উপযোগী।",
     specs: [
