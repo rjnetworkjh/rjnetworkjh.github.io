@@ -21,8 +21,8 @@ const PRODUCTS = [
       "products/router-1/1.jpg",
       "products/router-1/2.jpg",
       "products/router-1/3.jpg",
-      "products/router-1/4.jpeg",
-      "products/router-1/5.jpeg"
+      "products/router-1/4.jpg",
+      "products/router-1/5.jpg"
     ]
   },
 
