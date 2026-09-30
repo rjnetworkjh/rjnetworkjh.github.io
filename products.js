@@ -519,7 +519,7 @@ const PRODUCTS = [
   {
     id: "ups-1",
     name: "WGP Mini UPS for WiFi Router 10400mAh",
-    category: "ups",
+    category: "adapter",
     categoryName: "UPS / ADAPTER",
     price: 1799,
     unit: "",
