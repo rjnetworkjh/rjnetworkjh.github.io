@@ -322,13 +322,13 @@
       (i + 1) + '. ' + esc(l.p.name) + '\n    ' + l.qty + ' × ' + taka(l.p.price) + (l.p.unit ? '/' + esc(l.p.unit) : '') + ' = <b>' + taka(l.p.price * l.qty) + '</b>'
     ).join('\n');
     let msg =
-      '🛒 <b>নতুন অর্ডার</b>  #' + o.id + '\n\n' +
-      '👤 <b>' + esc(o.name) + '</b>\n' +
+      '🛒 নতুন স্টোর অর্ডার  #' + o.id + '\n\n' +
+      '👤 ' + esc(o.name) + '\n' +
       '📞 ' + esc(o.phone) + '\n' +
       '📍 ' + esc(o.address) + '\n' +
       (o.note ? '📝 ' + esc(o.note) + '\n' : '') +
-      '\n<b>পণ্য:</b>\n' + rows + '\n\n' +
-      '💰 <b>মোট: ' + taka(o.total) + '</b>\n' +
+      '\nপণ্য:\n' + rows + '\n\n' +
+      '💰 মোট: ' + taka(o.total) + '\n' +
       '💵 পেমেন্ট: ক্যাশ অন ডেলিভারি\n' +
       '🕒 ' + when;
     if (msg.length > 3900) msg = msg.slice(0, 3850) + '\n… (মেসেজ ছোট করা হয়েছে)';
