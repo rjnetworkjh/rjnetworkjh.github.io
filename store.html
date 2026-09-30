@@ -198,7 +198,7 @@
 
           <div class="p-5">
             <h2 class="font-bold text-lg leading-6 line-clamp-2">${product.name}</h2>
-            <p class="text-sm text-slate-400 leading-6 mt-2 line-clamp-2">${product.shortDescription}</p>
+<p class="text-sm text-slate-400 leading-6 mt-2 line-clamp-2">${product.description}</p>
 
             <div class="flex flex-wrap gap-1.5 mt-3">
               ${product.specs.slice(0,3).map(s => `<span class="px-2 py-1 rounded-lg bg-white/[.04] border border-white/[.06] text-[11px] text-slate-400">${s}</span>`).join('')}
@@ -236,7 +236,7 @@
         const searchMatch = !keyword ||
           p.name.toLowerCase().includes(keyword) ||
           p.categoryName.toLowerCase().includes(keyword) ||
-          p.shortDescription.toLowerCase().includes(keyword);
+          p.description.toLowerCase().includes(keyword);
         return categoryMatch && searchMatch;
       });
 
