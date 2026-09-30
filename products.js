@@ -359,14 +359,14 @@ const PRODUCTS = [
 
 
   // =========================================================
-  // LAN CABLE
+  // CABLE
   // =========================================================
 
   {
     id: "cat6-1",
     name: "UGREEN NW102 Cat-6 U/UTP 0.5 Meter Black Network Cable",
     category: "lan",
-    categoryName: "LAN Cable",
+    categoryName: "Cable",
     price: 150,
     unit: "পিস",
     stock: true,
@@ -386,17 +386,40 @@ const PRODUCTS = [
       "products/cat6-1/3.jpeg"
     ]
   },
-
+  {
+    id: "fiber-patch-1",
+    name: "Fiber Patch Cord (SC/UPC)",
+    category: "fiber",
+    categoryName: "Cable",
+    price: 180,
+    unit: "",
+    stock: true,
+    badge: "NEW",
+    description:
+      "Single Mode Fiber Patch Cord। FTTH ও optical networking-এর জন্য উপযোগী।",
+    specs: [
+      "Fiber Type: Single Mode",
+      "Connector: SC/UPC",
+      "Low Loss",
+      "Available Length: 1m / 3m / 5m / 10m",
+      "FTTH Compatible"
+    ],
+    images: [
+      "products/fiber-patch-1/1.jpeg",
+      "products/fiber-patch-1/2.jpeg",
+      "products/fiber-patch-1/3.jpeg"
+    ]
+  },
 
   // =========================================================
-  // RJ45 CONNECTOR
+  // CONNECTOR
   // =========================================================
 
   {
     id: "rj45-1",
     name: "Transparent RJ45 Connector (Cat6)",
     category: "rj45",
-    categoryName: "RJ45 Connector",
+    categoryName: "Connector",
     price: 20,
     unit: "পিস",
     stock: true,
@@ -419,7 +442,7 @@ const PRODUCTS = [
     id: "rj45-2",
     name: "Shielded RJ45 Connector (Cat6)",
     category: "rj45",
-    categoryName: "RJ45 Connector",
+    categoryName: "Connector",
     price: 10,
     unit: "পিস",
     stock: true,
@@ -440,14 +463,14 @@ const PRODUCTS = [
 
 
   // =========================================================
-  // POWER ADAPTER
+  // UPS / ADAPTER
   // =========================================================
 
   {
     id: "adapter-1",
     name: "12V 1A Power Adapter for Router / ONU",
     category: "adapter",
-    categoryName: "Power Adapter",
+    categoryName: "UPS / ADAPTER",
     price: 250,
     unit: "",
     stock: true,
@@ -472,7 +495,7 @@ const PRODUCTS = [
     id: "adapter-2",
     name: "12V 1A Power Adapter",
     category: "adapter",
-    categoryName: "Power Adapter",
+    categoryName: "UPS / ADAPTER",
     price: 150,
     unit: "",
     stock: true,
@@ -493,46 +516,11 @@ const PRODUCTS = [
     ]
   },
 
-
-  // =========================================================
-  // FIBER
-  // =========================================================
-
-  {
-    id: "fiber-patch-1",
-    name: "Fiber Patch Cord (SC/UPC)",
-    category: "fiber",
-    categoryName: "Fiber",
-    price: 180,
-    unit: "",
-    stock: true,
-    badge: "NEW",
-    description:
-      "Single Mode Fiber Patch Cord। FTTH ও optical networking-এর জন্য উপযোগী।",
-    specs: [
-      "Fiber Type: Single Mode",
-      "Connector: SC/UPC",
-      "Low Loss",
-      "Available Length: 1m / 3m / 5m / 10m",
-      "FTTH Compatible"
-    ],
-    images: [
-      "products/fiber-patch-1/1.jpeg",
-      "products/fiber-patch-1/2.jpeg",
-      "products/fiber-patch-1/3.jpeg"
-    ]
-  },
-
-
-  // =========================================================
-  // MINI UPS
-  // =========================================================
-
   {
     id: "ups-1",
     name: "WGP Mini UPS for WiFi Router 10400mAh",
     category: "ups",
-    categoryName: "Mini UPS",
+    categoryName: "UPS / ADAPTER",
     price: 1799,
     unit: "",
     stock: true,
