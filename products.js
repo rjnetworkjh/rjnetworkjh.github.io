@@ -23,28 +23,50 @@ const PRODUCTS = [
     ]
   },
 
-  {
-    id: "onu-1",
-    name: "XPON ONU (HG8245)",
-    category: "onu",
-    categoryName: "ONU",
-    price: 1350,
+    {
+    id: "router-2",
+    name: "Ruijie RG-EW300N 300 Mbps Wi-Fi 4 Wireless Smart Router",
+    category: "router",
+    categoryName: "রাউটার",
+    price: 1,800,
     unit: "",
     stock: true,
-    badge: "TEST",
+    badge: "NEW",
+    description:
+      "দ্রুতগতির Dual Band WiFi Router। বাসা ও ছোট অফিসের জন্য উপযোগী।",
+    specs: [
+      "Band - Single",
+      "Wi-Fi Coverage (Approximate) - Up to 1500 sq. ft.",
+      "Antenna (Type & Qty) - 2 x 5 dBi External Antenna",
+      "Color - Black"
+    ],
+    images: [
+      "products/router-2/1.jpeg",
+      "products/router-2/2.jpeg",
+      "products/router-2/3.jpeg",
+    ]
+  },
+
+  {
+    id: "onu-1",
+    name: "VSOL V2801RD Single Port XPON ONU",
+    category: "onu",
+    categoryName: "ONU",
+    price: 1,500,
+    unit: "",
+    stock: true,
+    badge: "NEW",
     description:
       "FTTH Internet connection-এর জন্য XPON ONU। নির্ভরযোগ্য ও ব্যবহারবান্ধব।",
     specs: [
-      "1GE + 3FE",
-      "XPON",
-      "2.4GHz WiFi",
-      "FTTH Support"
+      "Model: V2801RD",
+      "1 XPON port(EPON PX20+ and GPON Class B+)",
+      "1 x GE, Auto-negotiation RJ45 connectors",
+      "Detecting Rogue ONU, Hardware Dying Gasp",
+      "Transmission distance: 20KM"
     ],
     images: [
       "products/onu-1/1.jpeg",
-      "products/onu-1/2.jpeg",
-      "products/onu-1/3.jpeg",
-      "products/onu-1/4.jpeg"
     ]
   },
 
