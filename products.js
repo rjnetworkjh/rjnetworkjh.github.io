@@ -12,7 +12,6 @@ const PRODUCTS = [
       "দ্রুতগতির Dual Band WiFi Router। বাসা ও ছোট অফিসের জন্য উপযোগী।",
     specs: [
       "Model: RG-EW1200",
-      "Transmission Rate: 1200Mbps",
       "Frequency: 2.4 GHz, 5 GHz",
       "4 Antenna",
       "Port: 1x WAN, 1x LAN"
