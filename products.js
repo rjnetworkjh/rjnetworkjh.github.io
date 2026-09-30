@@ -72,26 +72,25 @@ const PRODUCTS = [
 
   {
     id: "cat6-1",
-    name: "Cat6 LAN Cable",
+    name: "UGREEN NW102 Cat-6 U/UTP 0.5 Meter Black Network Cable",
     category: "lan",
     categoryName: "LAN Cable",
-    price: 25,
+    price: 150,
     unit: "মিটার",
     stock: true,
-    badge: "TEST",
+    badge: "NEW",
     description:
       "High-speed Cat6 UTP LAN Cable। Internet ও networking-এর জন্য উপযোগী।",
     specs: [
-      "1 Gbps",
-      "UTP",
-      "High Speed",
-      "1m / 3m / 5m / 10m"
+      "Length - 0.5 Meter",
+      "Jacket Material - Unmentioned",
+      "Cable Shielding - U/UTP (shielded)",
+      "Color - Black"
     ],
     images: [
       "products/cat6-1/1.jpeg",
       "products/cat6-1/2.jpeg",
       "products/cat6-1/3.jpeg",
-      "products/cat6-1/4.jpeg"
     ]
   },
 
