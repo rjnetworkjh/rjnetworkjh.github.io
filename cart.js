@@ -20,7 +20,8 @@
   /* ========= HELPERS ========= */
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const taka = (n) => '৳ ' + Number(n).toLocaleString('en-BD');
-  const products = () => (Array.isArray(window.PRODUCTS) ? window.PRODUCTS : []);
+  // products.js তে `const PRODUCTS` আছে, যা window.PRODUCTS হয় না — তাই সরাসরি নাম দিয়ে ধরতে হবে
+  const products = () => (typeof PRODUCTS !== 'undefined' && Array.isArray(PRODUCTS) ? PRODUCTS : []);
   const find = (id) => products().find((p) => p.id === id);
 
   function readJSON(key, fallback) {
