@@ -269,8 +269,7 @@ const PRODUCTS = [
       "Compact Design"
     ],
     images: [
-      "products/onu-2/1.jpeg",
-      "products/onu-2/2.jpeg"
+      "products/onu-2/1.jpeg"
     ]
   },
 
@@ -323,9 +322,7 @@ const PRODUCTS = [
       "Compact Design"
     ],
     images: [
-      "products/onu-4/1.jpeg",
-      "products/onu-4/2.jpeg",
-      "products/onu-4/3.jpeg"
+      "products/onu-4/1.jpeg"
     ]
   },
 
@@ -486,33 +483,7 @@ const PRODUCTS = [
     ],
     images: [
       "products/adapter-1/1.jpeg",
-      "products/adapter-1/2.jpeg",
-      "products/adapter-1/3.jpeg"
-    ]
-  },
-
-  {
-    id: "adapter-2",
-    name: "12V 1A Power Adapter",
-    category: "adapter",
-    categoryName: "UPS / ADAPTER",
-    price: 150,
-    unit: "",
-    stock: true,
-    badge: "NEW",
-    description:
-      "Router, ONU এবং অন্যান্য networking device-এর জন্য 12V 1A Power Adapter।",
-    specs: [
-      "Output: 12V",
-      "Current: 1A",
-      "DC Output",
-      "Router Compatible",
-      "ONU Compatible",
-      "Indoor Use"
-    ],
-    images: [
-      "products/adapter-2/1.jpeg",
-      "products/adapter-2/2.jpeg"
+      "products/adapter-1/2.jpeg"
     ]
   },
 
