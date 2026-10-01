@@ -9,7 +9,7 @@ const PRODUCTS = [
     category: "router",
     categoryName: "রাউটার",
     price: 3050,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
@@ -33,7 +33,7 @@ const PRODUCTS = [
     category: "router",
     categoryName: "রাউটার",
     price: 1800,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
@@ -57,7 +57,7 @@ const PRODUCTS = [
     category: "router",
     categoryName: "রাউটার",
     price: 1750,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
@@ -85,7 +85,7 @@ const PRODUCTS = [
     category: "router",
     categoryName: "রাউটার",
     price: 1550,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
@@ -113,7 +113,7 @@ const PRODUCTS = [
     category: "router",
     categoryName: "রাউটার",
     price: 1490,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
@@ -141,7 +141,7 @@ const PRODUCTS = [
     category: "router",
     categoryName: "রাউটার",
     price: 3650,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
@@ -168,7 +168,7 @@ const PRODUCTS = [
     category: "router",
     categoryName: "রাউটার",
     price: 2440,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "HOT 🔥",
     description:
@@ -197,11 +197,11 @@ const PRODUCTS = [
     category: "router",
     categoryName: "রাউটার",
     price: 3000,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "HOT 🔥",
     description:
-      "AC1300 Dual Band Gigabit WiFi Router। High-speed Internet ও home networking-এর জন্য উপযোগী।",
+      "AC1200 Dual Band Gigabit WiFi Router। High-speed Internet ও home networking-এর জন্য উপযোগী।",
     specs: [
       "Model: WR1300",
       "5 x Gigabit Ethernet Ports",
@@ -226,7 +226,7 @@ const PRODUCTS = [
     category: "router",
     categoryName: "রাউটার",
     price: 1220,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
@@ -259,7 +259,7 @@ const PRODUCTS = [
     category: "onu",
     categoryName: "ONU",
     price: 1500,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
@@ -285,7 +285,7 @@ const PRODUCTS = [
     category: "onu",
     categoryName: "ONU",
     price: 650,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
@@ -309,7 +309,7 @@ const PRODUCTS = [
     category: "onu",
     categoryName: "ONU",
     price: 1900,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
@@ -337,7 +337,7 @@ const PRODUCTS = [
     category: "onu",
     categoryName: "ONU",
     price: 1399,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
@@ -362,7 +362,7 @@ const PRODUCTS = [
     category: "onu",
     categoryName: "ONU",
     price: 1360,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
@@ -416,10 +416,12 @@ const PRODUCTS = [
   {
     id: "fiber-patch-1",
     name: "Fiber Patch Cord (SC/UPC)",
-    category: "fiber",
+    category: "lan",
     categoryName: "Cable",
     price: 180,
-    unit: "",
+    unit: "পিস",
+    // TODO: দামটি কোন দৈর্ঘ্যের তা নিশ্চিত করে note ঠিক করুন
+    note: "দৈর্ঘ্য (১m / ৩m / ৫m / ১০m) অনুযায়ী দাম ভিন্ন হতে পারে — অর্ডারের আগে কল করে নিশ্চিত হোন।",
     stock: true,
     badge: "NEW",
     description:
@@ -499,7 +501,7 @@ const PRODUCTS = [
     category: "adapter",
     categoryName: "UPS / ADAPTER",
     price: 250,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
@@ -523,7 +525,7 @@ const PRODUCTS = [
     category: "adapter",
     categoryName: "UPS / ADAPTER",
     price: 1799,
-    unit: "",
+    unit: "পিস",
     stock: true,
     badge: "NEW",
     description:

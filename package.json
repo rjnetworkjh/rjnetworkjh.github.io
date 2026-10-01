@@ -1,0 +1,10 @@
+{
+  "name": "rj-network-site",
+  "private": true,
+  "scripts": {
+    "pages": "node generate-pages.js",
+    "css": "tailwindcss -i input.css -o style.css --minify",
+    "build": "node generate-pages.js && tailwindcss -i input.css -o style.css --minify"
+  },
+  "devDependencies": { "tailwindcss": "^3.4.0" }
+}

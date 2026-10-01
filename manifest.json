@@ -1,0 +1,14 @@
+{
+  "name": "RJ NETWORK",
+  "short_name": "RJ NETWORK",
+  "description": "কুষ্টিয়ার ইন্টারনেট সেবা, বিল পরিশোধ ও নেটওয়ার্কিং স্টোর",
+  "lang": "bn",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050912",
+  "theme_color": "#050912",
+  "icons": [
+    { "src": "logo.png", "sizes": "any", "type": "image/png", "purpose": "any" }
+  ]
+}
