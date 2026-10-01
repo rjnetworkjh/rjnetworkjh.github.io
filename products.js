@@ -208,7 +208,7 @@ const PRODUCTS = [
       "4 x 5dBi High Gain Antennas",
       "2-IN-1 WiFi Router / Access Point",
       "MIMO Technology Support",
-      "Frequency: 5 GHz, 2.4 GHz",
+      "Frequency: 5 GHz + 2.4 GHz",
       "Guest Network",
       "Parental Control"
     ],
