@@ -170,7 +170,7 @@ const PRODUCTS = [
     price: 2440,
     unit: "",
     stock: true,
-    badge: "NEW",
+    badge: "HOT 🔥",
     description:
       "AC1200 Dual Band Gigabit WiFi Router। High-speed Internet ও home networking-এর জন্য উপযোগী।",
     specs: [
@@ -186,12 +186,42 @@ const PRODUCTS = [
     images: [
       "products/router-7/1.jpeg",
       "products/router-7/2.jpeg",
-      "products/router-7/3.jpeg"
+      "products/router-7/3.jpeg",
+      "products/router-7/4.jpeg"
     ]
   },
 
   {
     id: "router-8",
+    name: "Cudy WR1300 AC1200 Gigabit Dual Band Wi-Fi Router",
+    category: "router",
+    categoryName: "রাউটার",
+    price: 3000,
+    unit: "",
+    stock: true,
+    badge: "HOT 🔥",
+    description:
+      "AC1300 Dual Band Gigabit WiFi Router। High-speed Internet ও home networking-এর জন্য উপযোগী।",
+    specs: [
+      "Model: WR1300",
+      "5 x Gigabit Ethernet Ports",
+      "4 x 5dBi High Gain Antennas",
+      "2-IN-1 WiFi Router / Access Point",
+      "MIMO Technology Support",
+      "Frequency: 5 GHz, 2.4 GHz",
+      "Guest Network",
+      "Parental Control"
+    ],
+    images: [
+      "products/router-8/1.jpeg",
+      "products/router-8/2.jpeg",
+      "products/router-8/3.jpeg"
+      "products/router-8/4.jpeg"
+    ]
+  },
+
+  {
+    id: "router-9",
     name: "Mercusys MW325R 300Mbps Enhanced Wireless N Router",
     category: "router",
     categoryName: "রাউটার",
@@ -212,9 +242,9 @@ const PRODUCTS = [
       "Parental Control"
     ],
     images: [
-      "products/router-8/1.jpeg",
-      "products/router-8/2.jpeg",
-      "products/router-8/3.jpeg"
+      "products/router-9/1.jpeg",
+      "products/router-9/2.jpeg",
+      "products/router-9/3.jpeg"
     ]
   },
 
