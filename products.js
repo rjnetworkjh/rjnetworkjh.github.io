@@ -206,7 +206,7 @@ const PRODUCTS = [
       "Model: WR1300",
       "5 x Gigabit Ethernet Ports",
       "4 x 5dBi High Gain Antennas",
-      "2-IN-1 WiFi Router / Access Point",
+      "2-IN-1 WiFi Router + Access Point",
       "MIMO Technology Support",
       "Frequency: 5 GHz + 2.4 GHz",
       "Guest Network",
@@ -215,7 +215,7 @@ const PRODUCTS = [
     images: [
       "products/router-8/1.jpeg",
       "products/router-8/2.jpeg",
-      "products/router-8/3.jpeg"
+      "products/router-8/3.jpeg",
       "products/router-8/4.jpeg"
     ]
   },
