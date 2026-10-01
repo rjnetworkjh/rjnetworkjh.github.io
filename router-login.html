@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>রাউটার লগইন পেজ — TP-Link, Tenda, Mi, Cudy সহ সব ব্র্যান্ডের ডিফল্ট IP | RJ NETWORK</title>
+<meta name="description" content="TP-Link, Tenda, Xiaomi, Mercusys, Netis, D-Link, Totolink, Cudy, ASUS, Huawei, MikroTik রাউটারের অ্যাডমিন লগইন পেজ ও ডিফল্ট IP এক জায়গায়। WiFi পাসওয়ার্ড বদলানো ও সেটিংসের জন্য।">
+<meta name="theme-color" content="#050912">
+<link rel="canonical" href="https://rjnetworkjh.github.io/router-login.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="bn_BD">
+<meta property="og:site_name" content="RJ NETWORK">
+<meta property="og:title" content="রাউটার অ্যাডমিন লগইন — ব্র্যান্ড অনুযায়ী ডিফল্ট IP">
+<meta property="og:description" content="আপনার রাউটারের ব্র্যান্ড বেছে নিন, লগইন পেজে সরাসরি যান।">
+<meta property="og:url" content="https://rjnetworkjh.github.io/router-login.html">
+<meta property="og:image" content="https://rjnetworkjh.github.io/logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Baloo+Da+2:wght@700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"রাউটারের অ্যাডমিন প্যানেলে লগইন করার নিয়ম",
+"step":[
+{"@type":"HowToStep","name":"রাউটারের সাথে যুক্ত হোন","text":"যে রাউটারের সেটিংস খুলবেন, তার WiFi বা LAN ক্যাবলের সাথে আপনার ফোন/কম্পিউটার যুক্ত রাখুন।"},
+{"@type":"HowToStep","name":"ব্র্যান্ড বেছে নিন","text":"এই পেজ থেকে আপনার রাউটারের ব্র্যান্ডের লগইন পেজ খুলুন বা ডিফল্ট IP ব্রাউজারের অ্যাড্রেস বারে লিখুন।"},
+{"@type":"HowToStep","name":"ইউজারনেম ও পাসওয়ার্ড দিন","text":"রাউটারের পেছনের স্টিকারে লেখা ইউজারনেম ও পাসওয়ার্ড ব্যবহার করুন।"}
+]}
+</script>
+<style>
+  :root{
+    --bg:#050912; --bg2:#0a1120; --surface:rgba(255,255,255,.055); --surface2:rgba(255,255,255,.09);
+    --border:rgba(255,255,255,.10); --text:#e9f1fa; --dim:#93a4bd; --cyan:#22d3ee; --violet:#8b80ff;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; min-height:100vh; color:var(--text); font-family:'Hind Siliguri',system-ui,'Noto Sans Bengali',sans-serif;
+    background:
+      radial-gradient(60% 45% at 15% 0%, color-mix(in srgb, var(--violet) 16%, transparent), transparent 60%),
+      radial-gradient(50% 40% at 100% 15%, color-mix(in srgb, var(--cyan) 18%, transparent), transparent 60%),
+      var(--bg2);
+    background-attachment:fixed;
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  a{color:inherit;text-decoration:none}
+  a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+  .glass{background:var(--surface);border:1px solid var(--border);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%)}
+  .min0{min-width:0}
+  .display{font-family:'Baloo Da 2','Hind Siliguri',sans-serif}
+
+  header{position:sticky;top:0;z-index:30;background:var(--surface2);border-bottom:1px solid var(--border);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);padding-top:env(safe-area-inset-top,0px)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+  .brand{display:flex;align-items:center;gap:10px;min-width:0}
+  .brand img{width:46px;height:46px;border-radius:12px;object-fit:contain;flex-shrink:0}
+  .brand b{display:block;font-size:19px;line-height:1.15}
+  .brand span{display:block;font-size:12px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pills{display:flex;gap:8px;flex-shrink:0}
+  .pill{padding:8px 14px;border-radius:999px;font-size:13.5px;font-weight:600}
+  .pill.cyan{color:var(--cyan)}
+  @media(max-width:520px){.pill.call span{display:none}}
+
+  .hero{text-align:center;padding:44px 0 22px}
+  .hero h1{margin:0;font-size:clamp(28px,6vw,44px);line-height:1.2;font-weight:800}
+  .hero p{margin:12px auto 0;max-width:620px;color:var(--dim);font-size:16.5px;line-height:1.7}
+  .crumbs{font-size:13.5px;color:var(--dim);padding-top:14px}
+  .crumbs a:hover{color:var(--cyan)}
+
+  .steps{display:grid;gap:10px;grid-template-columns:1fr;margin:8px 0 22px}
+  @media(min-width:700px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{border-radius:16px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.6;color:var(--dim)}
+  .step i{flex-shrink:0;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:700;font-size:14px;color:#04121c;background:linear-gradient(135deg,var(--cyan),var(--violet))}
+  .step b{display:block;color:var(--text);font-size:15px}
+
+  .search{position:relative;margin:0 0 18px}
+  .search input{
+    width:100%;padding:14px 16px 14px 46px;border-radius:16px;font-size:16px;color:var(--text);font-family:inherit;
+    background:var(--surface2);border:1px solid var(--border);
+  }
+  .search input::placeholder{color:var(--dim)}
+  .search svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--dim)}
+  #count{font-size:13.5px;color:var(--dim);margin:0 2px 12px}
+
+  .grid{display:grid;gap:12px;grid-template-columns:1fr}
+  @media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr)}}
+  .card{border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px;transition:border-color .15s ease,transform .15s ease}
+  .card:hover{border-color:color-mix(in srgb,var(--cyan) 45%,var(--border));transform:translateY(-2px)}
+  .card[hidden]{display:none}
+  .card-head{display:flex;align-items:center;gap:12px}
+  .logo{
+    width:46px;height:46px;border-radius:14px;flex-shrink:0;display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:17px;color:#fff;background:color-mix(in srgb,var(--c) 85%,#000);
+    box-shadow:0 6px 16px color-mix(in srgb,var(--c) 35%,transparent);
+  }
+  .card h3{margin:0;font-size:18px;line-height:1.2}
+  .ip{margin:3px 0 0;font-size:13.5px;color:var(--dim)}
+  .ip b{color:var(--cyan);font-weight:700;letter-spacing:.2px}
+  .note{margin:0;font-size:13px;line-height:1.55;color:#fcd34d}
+  .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+  .btn{
+    padding:10px 14px;border-radius:12px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;text-align:center;
+    border:1px solid var(--border);color:var(--text);background:var(--surface2);transition:filter .15s ease,border-color .15s ease;
+  }
+  .btn:hover{border-color:color-mix(in srgb,var(--cyan) 55%,var(--border))}
+  .btn.primary{flex:1 1 100%;color:#04121c;border-color:transparent;background:linear-gradient(135deg,var(--cyan),var(--violet))}
+  .btn.primary:hover{filter:brightness(1.07)}
+  .btn.ghost{flex:1 1 auto;font-size:13px;font-weight:600}
+
+  .empty{border-radius:20px;padding:32px 20px;text-align:center;margin-top:8px}
+  .empty[hidden]{display:none}
+  .empty h2{margin:0 0 6px;font-size:20px}
+  .empty p{margin:0 0 16px;color:var(--dim)}
+
+  section.block{margin-top:34px}
+  h2.sec{font-size:22px;margin:0 0 14px}
+  details{border-radius:16px;margin-bottom:10px;overflow:hidden}
+  summary{cursor:pointer;list-style:none;padding:15px 18px;font-weight:600;font-size:15.5px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:'+';font-size:22px;line-height:1;color:var(--cyan);transition:transform .2s ease}
+  details[open] summary::after{transform:rotate(45deg)}
+  .body{padding:0 18px 16px;font-size:14.5px;line-height:1.8;color:var(--dim)}
+  .body ol,.body ul{margin:6px 0 0;padding-left:20px}
+  .body b{color:var(--text)}
+  .body code{background:var(--surface2);padding:1px 7px;border-radius:6px;color:var(--cyan);font-size:13.5px}
+
+  .warn{border-radius:18px;padding:16px 18px;border-color:rgba(252,211,77,.28);background:rgba(252,211,77,.06);font-size:14.5px;line-height:1.75;color:#fde68a}
+  .warn b{color:#fef3c7}
+
+  .cta{border-radius:24px;padding:26px 20px;text-align:center;margin-top:34px}
+  .cta h2{margin:0;font-size:22px}
+  .cta p{margin:8px 0 18px;color:var(--dim)}
+  .cta .row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .cta .btn{padding:12px 22px;font-size:15px}
+  .wa{background:#128c4a;color:#fff;border-color:transparent}
+
+  footer{text-align:center;margin:36px 0 30px;font-size:13.5px;color:var(--dim);line-height:1.8}
+  footer b.n{display:block;font-size:18px;color:var(--text)}
+  footer a{color:var(--cyan);font-weight:600}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="RJ NETWORK হোম">
+      <img src="logo.png" alt="RJ NETWORK লোগো" width="46" height="46">
+      <div class="min0"><b class="display">RJ NETWORK</b><span>ঝাউদিয়া বলফিল্ড মোড়, কুষ্টিয়া সদর</span></div>
+    </a>
+    <div class="pills">
+      <a class="pill glass" href="index.html">হোম</a>
+      <a class="pill glass" href="store.html">স্টোর</a>
+      <a class="pill glass cyan call" href="tel:09639019016">📞 <span>09639-019016</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="crumbs" aria-label="breadcrumb"><a href="index.html">হোম</a> › রাউটার লগইন</nav>
+
+  <section class="hero">
+    <h1 class="display">রাউটার অ্যাডমিন লগইন</h1>
+    <p>WiFi পাসওয়ার্ড বদলাতে বা সেটিংস দেখতে আপনার রাউটারের ব্র্যান্ড বেছে নিন। ডিফল্ট IP আর লগইন পেজ এখানেই পাবেন।</p>
+  </section>
+
+  <section class="steps" aria-label="লগইনের ধাপ">
+    <div class="step glass"><i>১</i><div><b>রাউটারের সাথে যুক্ত থাকুন</b>ওই রাউটারের WiFi বা LAN ক্যাবলের সাথে ফোন/কম্পিউটার কানেক্ট রাখুন।</div></div>
+    <div class="step glass"><i>২</i><div><b>ব্র্যান্ড বেছে নিন</b>নিচের তালিকা থেকে "লগইন পেজ খুলুন" চাপুন।</div></div>
+    <div class="step glass"><i>৩</i><div><b>ইউজারনেম ও পাসওয়ার্ড দিন</b>এগুলো সাধারণত রাউটারের পেছনের স্টিকারে লেখা থাকে।</div></div>
+  </section>
+
+  <div class="search">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="ব্র্যান্ড খুঁজুন (যেমন: Tenda, TP-Link)" aria-label="রাউটার ব্র্যান্ড খুঁজুন" autocomplete="off">
+  </div>
+  <p id="count" aria-live="polite"></p>
+
+  <div class="grid" id="grid">
+      <article class="card glass" data-key="tp-link 192.168.0.1 tplinkwifi.net">
+        <div class="card-head">
+          <span class="logo" style="--c:#4acbd6" aria-hidden="true">T</span>
+          <div class="min0"><h3>TP-Link</h3><p class="ip">ডিফল্ট IP: <b>192.168.0.1</b></p></div>
+        </div>
+        <p class="note">ℹ️ পুরোনো মডেলে 192.168.1.1 হতে পারে</p>
+        <div class="actions">
+          <a class="btn primary" href="http://192.168.0.1" target="_blank" rel="noopener">লগইন পেজ খুলুন</a>
+          <a class="btn ghost" href="http://tplinkwifi.net" target="_blank" rel="noopener">tplinkwifi.net</a>
+          <button type="button" class="btn ghost copy" data-copy="192.168.0.1" aria-label="TP-Link IP কপি করুন">কপি IP</button>
+        </div>
+      </article>
+      <article class="card glass" data-key="tenda 192.168.0.1 tendawifi.com">
+        <div class="card-head">
+          <span class="logo" style="--c:#f58220" aria-hidden="true">T</span>
+          <div class="min0"><h3>Tenda</h3><p class="ip">ডিফল্ট IP: <b>192.168.0.1</b></p></div>
+        </div>
+        
+        <div class="actions">
+          <a class="btn primary" href="http://192.168.0.1" target="_blank" rel="noopener">লগইন পেজ খুলুন</a>
+          <a class="btn ghost" href="http://tendawifi.com" target="_blank" rel="noopener">tendawifi.com</a>
+          <button type="button" class="btn ghost copy" data-copy="192.168.0.1" aria-label="Tenda IP কপি করুন">কপি IP</button>
+        </div>
+      </article>
+      <article class="card glass" data-key="mi / xiaomi 192.168.31.1 miwifi.com">
+        <div class="card-head">
+          <span class="logo" style="--c:#ff6900" aria-hidden="true">Mi</span>
+          <div class="min0"><h3>Mi / Xiaomi</h3><p class="ip">ডিফল্ট IP: <b>192.168.31.1</b></p></div>
+        </div>
+        
+        <div class="actions">
+          <a class="btn primary" href="http://192.168.31.1" target="_blank" rel="noopener">লগইন পেজ খুলুন</a>
+          <a class="btn ghost" href="http://miwifi.com" target="_blank" rel="noopener">miwifi.com</a>
+          <button type="button" class="btn ghost copy" data-copy="192.168.31.1" aria-label="Mi / Xiaomi IP কপি করুন">কপি IP</button>
+        </div>
+      </article>
+      <article class="card glass" data-key="mercusys 192.168.1.1 mwlogin.net">
+        <div class="card-head">
+          <span class="logo" style="--c:#e4002b" aria-hidden="true">M</span>
+          <div class="min0"><h3>Mercusys</h3><p class="ip">ডিফল্ট IP: <b>192.168.1.1</b></p></div>
+        </div>
+        
+        <div class="actions">
+          <a class="btn primary" href="http://192.168.1.1" target="_blank" rel="noopener">লগইন পেজ খুলুন</a>
+          <a class="btn ghost" href="http://mwlogin.net" target="_blank" rel="noopener">mwlogin.net</a>
+          <button type="button" class="btn ghost copy" data-copy="192.168.1.1" aria-label="Mercusys IP কপি করুন">কপি IP</button>
+        </div>
+      </article>
+      <article class="card glass" data-key="netis 192.168.1.1 netis.cc">
+        <div class="card-head">
+          <span class="logo" style="--c:#2f80ed" aria-hidden="true">N</span>
+          <div class="min0"><h3>Netis</h3><p class="ip">ডিফল্ট IP: <b>192.168.1.1</b></p></div>
+        </div>
+        
+        <div class="actions">
+          <a class="btn primary" href="http://192.168.1.1" target="_blank" rel="noopener">লগইন পেজ খুলুন</a>
+          <a class="btn ghost" href="http://netis.cc" target="_blank" rel="noopener">netis.cc</a>
+          <button type="button" class="btn ghost copy" data-copy="192.168.1.1" aria-label="Netis IP কপি করুন">কপি IP</button>
+        </div>
+      </article>
+      <article class="card glass" data-key="d-link 192.168.0.1 dlinkrouter.local">
+        <div class="card-head">
+          <span class="logo" style="--c:#00a0e9" aria-hidden="true">D</span>
+          <div class="min0"><h3>D-Link</h3><p class="ip">ডিফল্ট IP: <b>192.168.0.1</b></p></div>
+        </div>
+        
+        <div class="actions">
+          <a class="btn primary" href="http://192.168.0.1" target="_blank" rel="noopener">লগইন পেজ খুলুন</a>
+          <a class="btn ghost" href="http://dlinkrouter.local" target="_blank" rel="noopener">dlinkrouter.local</a>
+          <button type="button" class="btn ghost copy" data-copy="192.168.0.1" aria-label="D-Link IP কপি করুন">কপি IP</button>
+        </div>
+      </article>
+      <article class="card glass" data-key="totolink 192.168.0.1 itotolink.net">
+        <div class="card-head">
+          <span class="logo" style="--c:#1fa76b" aria-hidden="true">Tl</span>
+          <div class="min0"><h3>Totolink</h3><p class="ip">ডিফল্ট IP: <b>192.168.0.1</b></p></div>
+        </div>
+        
+        <div class="actions">
+          <a class="btn primary" href="http://192.168.0.1" target="_blank" rel="noopener">লগইন পেজ খুলুন</a>
+          <a class="btn ghost" href="http://itotolink.net" target="_blank" rel="noopener">itotolink.net</a>
+          <button type="button" class="btn ghost copy" data-copy="192.168.0.1" aria-label="Totolink IP কপি করুন">কপি IP</button>
+        </div>
+      </article>
+      <article class="card glass" data-key="cudy 192.168.10.1 cudy.net">
+        <div class="card-head">
+          <span class="logo" style="--c:#3b82f6" aria-hidden="true">C</span>
+          <div class="min0"><h3>Cudy</h3><p class="ip">ডিফল্ট IP: <b>192.168.10.1</b></p></div>
+        </div>
+        
+        <div class="actions">
+          <a class="btn primary" href="http://192.168.10.1" target="_blank" rel="noopener">লগইন পেজ খুলুন</a>
+          <a class="btn ghost" href="http://cudy.net" target="_blank" rel="noopener">cudy.net</a>
+          <button type="button" class="btn ghost copy" data-copy="192.168.10.1" aria-label="Cudy IP কপি করুন">কপি IP</button>
+        </div>
+      </article>
+      <article class="card glass" data-key="asus 192.168.1.1 router.asus.com">
+        <div class="card-head">
+          <span class="logo" style="--c:#8b80ff" aria-hidden="true">A</span>
+          <div class="min0"><h3>ASUS</h3><p class="ip">ডিফল্ট IP: <b>192.168.1.1</b></p></div>
+        </div>
+        
+        <div class="actions">
+          <a class="btn primary" href="http://192.168.1.1" target="_blank" rel="noopener">লগইন পেজ খুলুন</a>
+          <a class="btn ghost" href="http://router.asus.com" target="_blank" rel="noopener">router.asus.com</a>
+          <button type="button" class="btn ghost copy" data-copy="192.168.1.1" aria-label="ASUS IP কপি করুন">কপি IP</button>
+        </div>
+      </article>
+      <article class="card glass" data-key="ruijie 192.168.110.1 ">
+        <div class="card-head">
+          <span class="logo" style="--c:#e60012" aria-hidden="true">R</span>
+          <div class="min0"><h3>Ruijie</h3><p class="ip">ডিফল্ট IP: <b>192.168.110.1</b></p></div>
+        </div>
+        <p class="note">ℹ️ মডেলভেদে ভিন্ন হতে পারে</p>
+        <div class="actions">
+          <a class="btn primary" href="http://192.168.110.1" target="_blank" rel="noopener">লগইন পেজ খুলুন</a>
+          
+          <button type="button" class="btn ghost copy" data-copy="192.168.110.1" aria-label="Ruijie IP কপি করুন">কপি IP</button>
+        </div>
+      </article>
+      <article class="card glass" data-key="gigabyte 192.168.1.1 ">
+        <div class="card-head">
+          <span class="logo" style="--c:#64748b" aria-hidden="true">G</span>
+          <div class="min0"><h3>Gigabyte</h3><p class="ip">ডিফল্ট IP: <b>192.168.1.1</b></p></div>
+        </div>
+        <p class="note">ℹ️ মডেলভেদে ভিন্ন হতে পারে</p>
+        <div class="actions">
+          <a class="btn primary" href="http://192.168.1.1" target="_blank" rel="noopener">লগইন পেজ খুলুন</a>
+          
+          <button type="button" class="btn ghost copy" data-copy="192.168.1.1" aria-label="Gigabyte IP কপি করুন">কপি IP</button>
+        </div>
+      </article>
+      <article class="card glass" data-key="huawei 192.168.3.1 ">
+        <div class="card-head">
+          <span class="logo" style="--c:#cf0a2c" aria-hidden="true">H</span>
+          <div class="min0"><h3>Huawei</h3><p class="ip">ডিফল্ট IP: <b>192.168.3.1</b></p></div>
+        </div>
+        <p class="note">ℹ️ ONT/ONU হলে 192.168.100.1</p>
+        <div class="actions">
+          <a class="btn primary" href="http://192.168.3.1" target="_blank" rel="noopener">লগইন পেজ খুলুন</a>
+          
+          <button type="button" class="btn ghost copy" data-copy="192.168.3.1" aria-label="Huawei IP কপি করুন">কপি IP</button>
+        </div>
+      </article>
+      <article class="card glass" data-key="mikrotik 192.168.88.1 ">
+        <div class="card-head">
+          <span class="logo" style="--c:#293239" aria-hidden="true">Mk</span>
+          <div class="min0"><h3>MikroTik</h3><p class="ip">ডিফল্ট IP: <b>192.168.88.1</b></p></div>
+        </div>
+        <p class="note">ℹ️ WinBox বা ব্রাউজার — দুটোতেই চলে</p>
+        <div class="actions">
+          <a class="btn primary" href="http://192.168.88.1" target="_blank" rel="noopener">লগইন পেজ খুলুন</a>
+          
+          <button type="button" class="btn ghost copy" data-copy="192.168.88.1" aria-label="MikroTik IP কপি করুন">কপি IP</button>
+        </div>
+      </article>
+  </div>
+
+  <div class="empty glass" id="empty" hidden>
+    <h2>এই ব্র্যান্ড তালিকায় নেই</h2>
+    <p>রাউটারের নাম বা মডেল জানিয়ে WhatsApp করুন, আমরা লগইন তথ্য জানিয়ে দেব।</p>
+    <a class="btn wa" href="https://wa.me/8801714019016?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BE%E0%A6%B0%20%E0%A6%B0%E0%A6%BE%E0%A6%89%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%B0%20%E0%A6%B2%E0%A6%97%E0%A6%87%E0%A6%A8/%E0%A6%B8%E0%A7%87%E0%A6%9F%E0%A6%BF%E0%A6%82%20%E0%A6%A8%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A7%87%20%E0%A6%B8%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%AF%E0%A7%8D%E0%A6%AF%20%E0%A6%A6%E0%A6%B0%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A5%A4" target="_blank" rel="noopener">💬 WhatsApp-এ জিজ্ঞাসা করুন</a>
+  </div>
+
+  <section class="block" aria-label="নিরাপত্তা পরামর্শ">
+    <div class="warn glass">
+      <b>🔒 নিরাপত্তার জন্য:</b> প্রথমবার লগইনের পর অ্যাডমিন পাসওয়ার্ড এবং WiFi পাসওয়ার্ড বদলে নিন। ডিফল্ট পাসওয়ার্ড রেখে দিলে অন্য কেউ আপনার রাউটারের সেটিংস বদলে দিতে পারে। রাউটারের পাসওয়ার্ড কারও সাথে শেয়ার করবেন না।
+    </div>
+  </section>
+
+  <section class="block" id="help" aria-label="সাধারণ প্রশ্নোত্তর">
+    <h2 class="sec display">লগইন পেজ না খুললে</h2>
+
+    <details class="glass">
+      <summary>আমার রাউটারের IP কীভাবে বের করব?</summary>
+      <div class="body">
+        <b>Windows:</b> <code>Win + R</code> চেপে <code>cmd</code> লিখুন, তারপর <code>ipconfig</code> দিন। "Default Gateway"-এর নম্বরটাই রাউটারের IP।
+        <ul>
+          <li><b>Android:</b> WiFi সেটিংসে কানেক্টেড নেটওয়ার্কে চাপুন, "Gateway" বা "Router" লেখা নম্বরটি দেখুন।</li>
+          <li><b>iPhone:</b> Settings → Wi-Fi → নেটওয়ার্কের পাশের (i) চাপুন → "Router" নম্বর।</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="glass">
+      <summary>"This site can't be reached" বা পেজ লোড হচ্ছে না</summary>
+      <div class="body">
+        <ul>
+          <li>আপনি সেই রাউটারের WiFi/LAN-এ যুক্ত আছেন কিনা দেখুন। এই লিংকগুলো শুধু রাউটারের নিজস্ব নেটওয়ার্কের ভেতর থেকে খোলে, অন্য কোথাও থেকে নয়।</li>
+          <li>মোবাইল ডেটা বন্ধ রাখুন, নইলে ফোন রাউটারে না গিয়ে ডেটায় চলে যেতে পারে।</li>
+          <li>ঠিকানার শুরুতে <code>http://</code> লিখুন (<code>https://</code> নয়)।</li>
+          <li>ডিফল্ট IP কাজ না করলে ওপরের নিয়মে Default Gateway দেখে সেই IP ব্যবহার করুন।</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="glass">
+      <summary>ইউজারনেম ও পাসওয়ার্ড কী দেব?</summary>
+      <div class="body">রাউটারের নিচে বা পেছনে স্টিকারে ইউজারনেম ও পাসওয়ার্ড লেখা থাকে। না থাকলে বা আগে বদলানো হয়ে থাকলে রাউটারের রিসেট বাটন ১০ সেকেন্ড চেপে ধরে ফ্যাক্টরি রিসেট করতে হবে। মনে রাখবেন, রিসেট করলে আগের সব সেটিংস (ইন্টারনেটের PPPoE তথ্যসহ) মুছে যায়। তাই আগে আমাদের সাথে কথা বলে নিন।</div>
+    </details>
+
+    <details class="glass">
+      <summary>আমার রাউটার/ONU বদলাতে বা কিনতে চাই</summary>
+      <div class="body"><a href="store.html" style="color:var(--cyan)"><b>আমাদের স্টোরে</b></a> Tenda, Cudy, Ruijie, Mercusys ও অন্যান্য রাউটার, ONU, ক্যাবল এবং UPS পাবেন। অর্ডার ক্যাশ অন ডেলিভারি।</div>
+    </details>
+  </section>
+
+  <section class="cta glass" aria-label="সাহায্য">
+    <h2 class="display">সেটিংসে সাহায্য লাগবে?</h2>
+    <p>রাউটার সেটআপ বা WiFi সমস্যায় আমাদের জানান।</p>
+    <div class="row">
+      <a class="btn wa" href="https://wa.me/8801714019016?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BE%E0%A6%B0%20%E0%A6%B0%E0%A6%BE%E0%A6%89%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%B0%20%E0%A6%B2%E0%A6%97%E0%A6%87%E0%A6%A8/%E0%A6%B8%E0%A7%87%E0%A6%9F%E0%A6%BF%E0%A6%82%20%E0%A6%A8%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A7%87%20%E0%A6%B8%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%AF%E0%A7%8D%E0%A6%AF%20%E0%A6%A6%E0%A6%B0%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A5%A4" target="_blank" rel="noopener">💬 WhatsApp</a>
+      <a class="btn" href="tel:09639019016">📞 কল করুন</a>
+      <a class="btn" href="index.html#apply">📝 সার্ভিস ফর্ম</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <b class="n display">RJ NETWORK</b>
+  <div>ঝাউদিয়া বলফিল্ড মোড়, কুষ্টিয়া সদর, কুষ্টিয়া</div>
+  <div>Hotline: <a href="tel:09639019016">09639-019016</a></div>
+  <div style="margin-top:10px;font-size:12.5px">© <span id="year"></span> RJ NETWORK — All rights reserved.</div>
+</footer>
+
+<script>
+  const q = document.getElementById('q');
+  const cards = [...document.querySelectorAll('#grid .card')];
+  const countEl = document.getElementById('count');
+  const emptyEl = document.getElementById('empty');
+
+  function filter(){
+    const k = q.value.trim().toLowerCase();
+    let n = 0;
+    cards.forEach(c => {
+      const show = !k || c.dataset.key.includes(k);
+      c.hidden = !show;
+      if (show) n++;
+    });
+    countEl.textContent = n + 'টি ব্র্যান্ড দেখানো হচ্ছে';
+    emptyEl.hidden = n !== 0;
+  }
+  q.addEventListener('input', filter);
+  filter();
+
+  document.querySelectorAll('.copy').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const text = btn.dataset.copy;
+      const done = () => { const old = btn.textContent; btn.textContent = 'কপি হয়েছে ✓'; setTimeout(() => btn.textContent = old, 1800); };
+      const fallback = () => {
+        const ta = document.createElement('textarea');
+        ta.value = text; ta.setAttribute('readonly',''); ta.style.cssText = 'position:fixed;opacity:0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); done(); } catch(e) { btn.textContent = text; }
+        document.body.removeChild(ta);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback);
+      else fallback();
+    });
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
