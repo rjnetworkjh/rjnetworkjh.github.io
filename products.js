@@ -556,7 +556,7 @@ const PRODUCTS = [
     id: "accessories-1",
     name: "Multi-Layer Wall Mounted Router Stand",
     category: "accessories",
-    categoryName: "accessories",
+    categoryName: "Accessories",
     price: 450,
     unit: "পিস",
     stock: true,
@@ -568,8 +568,8 @@ const PRODUCTS = [
       "Shelf Type: Metal",
       "Number of Shelves: 2",
       "Special Feature: Foldable",
-      "Care Material: Aluminum"
-      "Size: 275 x 205mm"
+      "Care Material: Aluminum",
+      "Size: 275 x 205mm",
       "Weight: 2000 gm"
     ],
     images: [
