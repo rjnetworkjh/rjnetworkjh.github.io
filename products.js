@@ -547,11 +547,10 @@ const PRODUCTS = [
   }
 ];
 
-
   {
     id: "accessories-1",
     name: "Multi Layer Wall Mounted Router Stand",
-    category: "adapter",
+    category: "accessories",
     categoryName: "Accessories",
     price: 450,
     unit: "পিস",
