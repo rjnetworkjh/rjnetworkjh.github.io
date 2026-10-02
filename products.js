@@ -546,3 +546,34 @@ const PRODUCTS = [
     ]
   }
 ];
+
+
+  // =========================================================
+  // Accessories 
+  // =========================================================
+
+  {
+    id: "accessories-1",
+    name: "Multi-Layer Wall Mounted Router Stand",
+    category: "accessories",
+    categoryName: "accessories",
+    price: 450,
+    unit: "পিস",
+    stock: true,
+    badge: "NEW",
+    description:
+      "Router ও ONU-এর জন্য Wall Mounted Stand।",
+    specs: [
+      "Mounting Type: Wall Mount",
+      "Shelf Type: Metal",
+      "Number of Shelves: 2",
+      "Special Feature: Foldable",
+      "Care Material: Aluminum"
+      "Size: 275 x 205mm"
+      "Weight: 2000 gm"
+    ],
+    images: [
+      "products/accessories-1/1.jpeg",
+      "products/accessories-1/2.jpeg"
+    ]
+  },
