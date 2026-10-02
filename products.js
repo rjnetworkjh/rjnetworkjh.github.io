@@ -548,32 +548,29 @@ const PRODUCTS = [
 ];
 
 
-  // =========================================================
-  // Accessories 
-  // =========================================================
-
   {
     id: "accessories-1",
-    name: "Multi-Layer Wall Mounted Router Stand",
-    category: "accessories",
+    name: "Multi Layer Wall Mounted Router Stand",
+    category: "adapter",
     categoryName: "Accessories",
     price: 450,
     unit: "পিস",
     stock: true,
     badge: "NEW",
     description:
-      "Router ও ONU-এর জন্য Wall Mounted Stand।",
+      "WiFi Router ও Onu-এর Stand।",
     specs: [
-      "Mounting Type: Wall Mount",
-      "Shelf Type: Metal",
-      "Number of Shelves: 2",
-      "Special Feature: Foldable",
-      "Care Material: Aluminum",
-      "Size: 275 x 205mm",
-      "Weight: 2000 gm"
+      "Brand: WGP",
+      "Battery Capacity: 10400mAh",
+      "Mini UPS for WiFi Router",
+      "Output: 5V / 9V / 12V",
+      "Multiple Voltage Support",
+      "Router Backup Power",
+      "Compact Design"
     ],
     images: [
       "products/accessories-1/1.jpeg",
       "products/accessories-1/2.jpeg"
     ]
-  },
+  }
+];
