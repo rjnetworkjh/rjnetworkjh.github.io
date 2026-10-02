@@ -544,8 +544,7 @@ const PRODUCTS = [
       "products/ups-1/2.jpeg",
       "products/ups-1/3.jpeg"
     ]
-  }
-];
+  },
 
   {
     id: "accessories-1",
@@ -557,15 +556,12 @@ const PRODUCTS = [
     stock: true,
     badge: "NEW",
     description:
-      "WiFi Router ও Onu-এর Stand।",
+      "WiFi Router ও ONU-এর Stand।",
     specs: [
-      "Brand: WGP",
-      "Battery Capacity: 10400mAh",
-      "Mini UPS for WiFi Router",
-      "Output: 5V / 9V / 12V",
-      "Multiple Voltage Support",
-      "Router Backup Power",
-      "Compact Design"
+      "Type: Multi Layer Wall Mounted Stand",
+      "Suitable for: WiFi Router / ONU",
+      "Mounting: Wall Mount",
+      "Space Saving Design"
     ],
     images: [
       "products/accessories-1/1.jpeg",
