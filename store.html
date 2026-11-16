@@ -22,7 +22,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Baloo+Da+2:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <!-- তোমার বিদ্যমান প্রোডাক্ট ও কার্ট স্ক্রিপ্ট -->
   <script src="products.js"></script>
   <script src="cart.js" defer></script>
 
@@ -51,6 +50,7 @@
       min-height:100vh;
     }
     .font-display{ font-family:"Baloo Da 2","Hind Siliguri",sans-serif; }
+    a{text-decoration:none;color:inherit}
     a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
 
     .glass{
@@ -66,6 +66,94 @@
       -webkit-backdrop-filter:blur(22px);
     }
 
+    /* Hero 2-Column Layout */
+    .hero-layout{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:24px;
+      align-items:center;
+    }
+    @media (min-width:960px){
+      .hero-layout{
+        grid-template-columns:1.35fr 1fr;
+        gap:32px;
+      }
+    }
+
+    /* Search & Sort Row */
+    .search-row{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin-top:20px;
+      max-width:560px;
+    }
+    @media (min-width:600px){
+      .search-row{ flex-direction:row; }
+    }
+    .search-box{
+      position:relative;
+      flex:1;
+    }
+    .search-box svg{
+      position:absolute;
+      left:14px;
+      top:50%;
+      transform:translateY(-50%);
+      width:17px;
+      height:17px;
+      color:var(--muted);
+      pointer-events:none;
+    }
+    .search-box input{
+      width:100%;
+      padding:11px 14px 11px 42px !important;
+      font-size:15px;
+    }
+    .store-input{
+      background:rgba(7,20,38,.88);
+      border:1px solid rgba(148,163,184,.22);
+      color:var(--text);
+      border-radius:14px;
+      outline:none;
+      font-family:inherit;
+      transition:border-color .2s ease, box-shadow .2s ease;
+    }
+    .store-input:focus{
+      border-color:var(--cyan);
+      box-shadow:0 0 0 3px rgba(34,211,238,.18);
+    }
+    .store-input option{background:#071827;color:var(--text)}
+
+    /* Trust Grid */
+    .trust-cards{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+    .trust-card{
+      padding:14px 15px;
+      border-radius:18px;
+    }
+
+    /* Header Phone Pill */
+    .header-phone{ display:none; }
+    @media (min-width:768px){
+      .header-phone{
+        display:inline-flex;
+        align-items:center;
+        gap:6px;
+        padding:8px 14px;
+        border-radius:12px;
+        background:rgba(34,211,238,.12);
+        border:1px solid rgba(34,211,238,.28);
+        color:var(--cyan);
+        font-size:14px;
+        font-weight:700;
+      }
+      .header-phone:hover{ background:rgba(34,211,238,.2); }
+    }
+
     /* Category Scroll */
     .cat-scroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
     .cat-scroll::-webkit-scrollbar{display:none}
@@ -73,6 +161,7 @@
       flex-shrink:0;padding:8px 15px;border-radius:999px;font-size:14px;font-weight:700;
       color:var(--muted);background:var(--panel);border:1px solid var(--border);
       transition:all .18s ease;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
+      font-family:inherit;
     }
     .cat-btn:hover{color:var(--text);border-color:rgba(34,211,238,.45)}
     .cat-btn.active{
@@ -85,6 +174,19 @@
       background:rgba(255,255,255,.1);color:inherit;
     }
     .cat-btn.active .count{background:rgba(3,9,20,.18);color:#030914}
+
+    /* Products Grid */
+    .products-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+    @media (min-width:768px){
+      .products-grid{ grid-template-columns:repeat(3,1fr); gap:18px; }
+    }
+    @media (min-width:1024px){
+      .products-grid{ grid-template-columns:repeat(4,1fr); gap:20px; }
+    }
 
     /* Product Card */
     .prod-card{
@@ -117,19 +219,22 @@
 
     .order-btn{
       background:linear-gradient(135deg,#10b981,#22c55e);color:#03130c;
-      font-weight:800;transition:filter .15s ease,transform .15s ease;cursor:pointer;
+      font-weight:800;border:none;font-family:inherit;
+      transition:filter .15s ease,transform .15s ease;cursor:pointer;
     }
     .order-btn:hover{filter:brightness(1.08)}
     .wa-btn{background:#128c4a;color:#fff;font-weight:700;transition:filter .15s ease}
     .wa-btn:hover{filter:brightness(1.1)}
 
-    /* Inputs */
-    .store-input{
-      background:rgba(7,20,38,.85);border:1px solid rgba(148,163,184,.2);
-      color:var(--text);border-radius:14px;outline:none;transition:border-color .2s ease;
+    /* Buying Guide Grid */
+    .guide-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
     }
-    .store-input:focus{border-color:var(--cyan)}
-    .store-input option{background:#071827;color:var(--text)}
+    @media (min-width:768px){
+      .guide-grid{ grid-template-columns:repeat(3,1fr); gap:16px; }
+    }
 
     /* Mobile bottom quick bar */
     .mobile-bar{display:none}
@@ -146,6 +251,7 @@
         display:flex;align-items:center;justify-content:center;gap:6px;
         padding:10px 6px;border-radius:12px;font-size:13.5px;font-weight:700;
         color:var(--text);border:1px solid var(--border);background:var(--panel);
+        font-family:inherit;
       }
       .mobile-bar .primary{
         background:linear-gradient(135deg,var(--cyan),var(--violet));
@@ -162,12 +268,12 @@
     🚚 ঝাউদিয়া ও কুষ্টিয়া সদরে ক্যাশ অন ডেলিভারি এবং ফ্রি রাউটার কনফিগারেশন সুবিধা!
   </div>
 
-  <!-- Header (product.html এর সাথে সামঞ্জস্যপূর্ণ) -->
+  <!-- Header -->
   <header class="sticky top-0 z-50 border-b border-cyan-400/10 bg-[#030914]/85 backdrop-blur-xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3">
       <div class="flex items-center justify-between gap-3">
         <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 min-w-0">
-          <img src="logo.png" alt="RJ NETWORK লোগো" width="52" height="52" class="w-11 h-11 sm:w-13 sm:h-13 object-contain flex-shrink-0 rounded-xl">
+          <img src="logo.png" alt="RJ NETWORK লোগো" width="48" height="48" class="w-11 h-11 sm:w-12 sm:h-12 object-contain flex-shrink-0 rounded-xl">
           <div class="min-w-0">
             <div class="font-display font-extrabold tracking-wide text-lg sm:text-xl truncate flex items-center gap-2">
               <span>RJ NETWORK</span>
@@ -185,7 +291,7 @@
             <span>🛒</span><span class="hidden sm:inline">কার্ট</span>
             <span data-cart-count class="rjc-badge" style="display:none">0</span>
           </button>
-          <a href="tel:09639019016" class="hidden md:inline-flex px-3.5 py-2 rounded-xl bg-cyan-400/15 border border-cyan-400/25 text-cyan-300 text-sm font-bold hover:bg-cyan-400/20 transition">
+          <a href="tel:09639019016" class="header-phone">
             📞 09639-019016
           </a>
         </div>
@@ -196,26 +302,26 @@
   <main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
 
     <!-- Compact Hero Banner -->
-    <section class="glass-strong rounded-3xl p-5 sm:p-8 mb-7 relative overflow-hidden">
-      <div class="grid lg:grid-cols-12 gap-6 items-center">
-        <div class="lg:col-span-7">
+    <section class="glass-strong rounded-3xl p-5 sm:p-8 mb-7">
+      <div class="hero-layout">
+        <div>
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-300/25 text-cyan-300 text-xs font-bold mb-3">
             ⚡ অরিজিনাল নেটওয়ার্কিং ডিভাইস • ক্যাশ অন ডেলিভারি
           </div>
-          <h1 class="font-display font-extrabold text-2xl sm:text-4xl leading-tight">
+          <h1 class="font-display font-extrabold text-2xl sm:text-4xl leading-tight m-0">
             হাই-স্পিড ওয়াই-ফাই রাউটার, ONU ও মিনি UPS স্টোর
           </h1>
-          <p class="text-slate-300 text-sm sm:text-base mt-2.5 max-w-2xl leading-relaxed">
+          <p class="text-slate-300 text-sm sm:text-base mt-2.5 leading-relaxed mb-0">
             Ruijie, Cudy, Tenda রাউটার থেকে শুরু করে VSOL/C-Data XPON ONU এবং লোডশেডিং ব্যাকআপের জন্য WGP Mini UPS — সবকিছু পাচ্ছেন সাশ্রয়ী দামে।
           </p>
 
           <!-- Search & Sort Controls -->
-          <div class="mt-5 flex flex-col sm:flex-row gap-2.5 max-w-xl">
-            <div class="relative flex-1">
-              <input type="search" id="searchInput" class="store-input w-full py-2.5 pl-10 pr-4 text-sm sm:text-base" placeholder="রাউটার, ONU, মিনি UPS বা মডেল লিখুন...">
-              <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <div class="search-row">
+            <div class="search-box">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                 <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
               </svg>
+              <input type="search" id="searchInput" class="store-input" placeholder="রাউটার, ONU, মিনি UPS বা মডেল লিখুন...">
             </div>
             <select id="sortSelect" aria-label="সাজান" class="store-input py-2.5 px-3.5 text-sm font-semibold cursor-pointer">
               <option value="default">সাজান: ডিফল্ট</option>
@@ -226,23 +332,23 @@
         </div>
 
         <!-- Trust Badges -->
-        <div class="lg:col-span-5 grid grid-cols-2 gap-3">
-          <div class="glass rounded-2xl p-3.5">
+        <div class="trust-cards">
+          <div class="glass trust-card">
             <div class="text-xl mb-1">🛠️</div>
             <div class="font-bold text-sm text-slate-100">ফ্রি সেটআপ সুবিধা</div>
             <div class="text-xs text-slate-400 mt-0.5">আমাদের টেকনিশিয়ান কনফিগার করে দেবে</div>
           </div>
-          <div class="glass rounded-2xl p-3.5">
+          <div class="glass trust-card">
             <div class="text-xl mb-1">💵</div>
             <div class="font-bold text-sm text-slate-100">ক্যাশ অন ডেলিভারি</div>
             <div class="text-xs text-slate-400 mt-0.5">পণ্য হাতে পেয়ে টাকা পরিশোধ করুন</div>
           </div>
-          <div class="glass rounded-2xl p-3.5">
+          <div class="glass trust-card">
             <div class="text-xl mb-1">🔋</div>
             <div class="font-bold text-sm text-slate-100">পাওয়ার ব্যাকআপ</div>
             <div class="text-xs text-slate-400 mt-0.5">কারেন্ট গেলেও চলবে ওয়াই-ফাই</div>
           </div>
-          <div class="glass rounded-2xl p-3.5">
+          <div class="glass trust-card">
             <div class="text-xl mb-1">📍</div>
             <div class="font-bold text-sm text-slate-100">স্থানীয় সাপোর্ট</div>
             <div class="text-xs text-slate-400 mt-0.5">ঝাউদিয়া বলফিল্ড মোড় অফিস</div>
@@ -252,26 +358,26 @@
     </section>
 
     <!-- Category Filter Bar -->
-    <section aria-label="ক্যাটাগরি ফিল্টার" class="mb-6">
+    <section aria-label="ক্যাটাগরি ফিল্টার" class="mb-5">
       <div class="cat-scroll" id="categoryBar"></div>
     </section>
 
     <!-- Active Filter Info -->
     <div class="flex items-center justify-between mb-4 px-1 text-xs sm:text-sm text-slate-400">
       <div id="resultSummary">সব পণ্য দেখানো হচ্ছে</div>
-      <button type="button" id="resetFilterBtn" class="hidden text-cyan-300 font-bold hover:underline cursor-pointer">ফিল্টার রিসেট করুন</button>
+      <button type="button" id="resetFilterBtn" class="hidden text-cyan-300 font-bold hover:underline cursor-pointer bg-transparent border-0">ফিল্টার রিসেট করুন</button>
     </div>
 
     <!-- Products Grid -->
     <section aria-label="প্রোডাক্ট তালিকা">
-      <div id="productsGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5"></div>
+      <div id="productsGrid" class="products-grid"></div>
 
       <!-- Empty Search State -->
       <div id="emptyState" class="hidden glass rounded-3xl p-10 sm:p-14 text-center">
         <div class="text-5xl mb-3">🔍</div>
         <h2 class="text-xl font-black">কোনো পণ্য পাওয়া যায়নি</h2>
         <p class="text-slate-400 text-sm mt-1">অন্য মডেল বা নাম লিখে খুঁজুন, অথবা সব পণ্য দেখুন।</p>
-        <button type="button" onclick="resetAllFilters()" class="mt-5 px-5 py-2.5 rounded-xl bg-cyan-400 text-slate-950 font-black text-sm cursor-pointer">
+        <button type="button" onclick="resetAllFilters()" class="mt-5 px-5 py-2.5 rounded-xl bg-cyan-400 text-slate-950 font-black text-sm cursor-pointer border-0">
           সব পণ্য দেখুন
         </button>
       </div>
@@ -279,24 +385,24 @@
 
     <!-- Smart Router Buying Guide -->
     <section class="glass-strong rounded-3xl p-5 sm:p-7 mt-12">
-      <h2 class="font-display font-bold text-xl sm:text-2xl">🤔 কোন ডিভাইসটি আপনার জন্য সেরা?</h2>
+      <h2 class="font-display font-bold text-xl sm:text-2xl m-0">🤔 কোন ডিভাইসটি আপনার জন্য সেরা?</h2>
       <p class="text-slate-400 text-sm mt-1 mb-4">আপনার ইন্টারনেট প্যাকেজ ও বাসার প্রয়োজন অনুযায়ী বেছে নিন:</p>
-      <div class="grid sm:grid-cols-3 gap-3 text-sm">
+      <div class="guide-grid text-sm">
         <div class="glass rounded-2xl p-4">
           <div class="font-bold text-cyan-300 mb-1">৩০ – ৪০ Mbps প্যাকেজ</div>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed m-0">
             সাধারণ ব্যবহার ও ২-৩ রুমের জন্য <b>Tenda F3 / F6</b> বা <b>Mercusys MW325R (300Mbps)</b> বাজেট সেরা।
           </p>
         </div>
         <div class="glass rounded-2xl p-4">
           <div class="font-bold text-cyan-300 mb-1">৫০ – ১০০ Mbps প্যাকেজ</div>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed m-0">
             পুরো স্পিড, গেমিং ও বাফারিংহীন 4K ভিডিওর জন্য <b>Cudy WR1200 / WR1300</b> বা <b>Ruijie Dual-Band</b> রাউটার নিন।
           </p>
         </div>
         <div class="glass rounded-2xl p-4">
           <div class="font-bold text-cyan-300 mb-1">কারেন্ট গেলেও ইন্টারনেট</div>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed m-0">
             লোডশেডিংয়ে রাউটার ও ONU একসাথে চালু রাখতে <b>WGP Mini UPS (10400mAh)</b> ব্যবহার করুন।
           </p>
         </div>
@@ -347,7 +453,6 @@
     function taka(n){ return '৳ ' + Number(n).toLocaleString('en-BD'); }
     function esc(str){ return String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
-    // ক্যাটাগরি লিস্ট (products.js এর category অনুযায়ী)
     const CATEGORIES = [
       { id: 'all', label: 'সব পণ্য', icon: '🛍️' },
       { id: 'router', label: 'রাউটার', icon: '📡' },
@@ -446,7 +551,7 @@
             <div class="p-3 sm:p-4 flex-1 flex flex-col justify-between">
               <div>
                 <a href="${detailUrl}" class="hover:text-cyan-300 transition">
-                  <h3 class="font-bold text-sm sm:text-[15.5px] leading-snug line-clamp-2">${esc(p.name)}</h3>
+                  <h3 class="font-bold text-sm sm:text-[15.5px] leading-snug line-clamp-2 m-0">${esc(p.name)}</h3>
                 </a>
 
                 ${topSpecs.length ? `
@@ -487,12 +592,10 @@
         `;
       }).join('');
 
-      // ডাইনামিক কার্ড রেন্ডার হওয়ার পর cart.js বাটনগুলো রি-ইনিশিয়ালাইজ করার জন্য
       if(window.Cart && typeof Cart.refresh === 'function') Cart.refresh();
       else if(window.Cart && typeof Cart.init === 'function') Cart.init();
     }
 
-    // URL-এ ?cat=router থাকলে অটো সিলেক্ট হবে
     const urlCat = new URLSearchParams(location.search).get('cat');
     if(urlCat && CATEGORIES.some(c => c.id === urlCat)) selectedCategory = urlCat;
 
