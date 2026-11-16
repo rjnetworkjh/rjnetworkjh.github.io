@@ -1,397 +1,503 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>অনলাইন স্টোর | RJ NETWORK — রাউটার, ONU ও নেটওয়ার্কিং ডিভাইস</title>
-<meta name="description" content="RJ NETWORK অনলাইন স্টোর — Cudy, TP-Link ওয়াই-ফাই রাউটার, XPON ONU, মিনি রাউটার UPS ও নেটওয়ার্কিং এক্সেসরিজ। ঝাউদিয়া ও কুষ্টিয়া সদরে ক্যাশ অন ডেলিভারি ও ফ্রি সেটআপ সুবিধা।">
-<meta name="theme-color" content="#050912">
-<link rel="canonical" href="https://rjnetworkjh.github.io/store.html">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="bn_BD">
-<meta property="og:site_name" content="RJ NETWORK">
-<meta property="og:title" content="RJ NETWORK অনলাইন স্টোর — রাউটার, ONU ও মিনি UPS">
-<meta property="og:description" content="অরিজিনাল ওয়ারেন্টিযুক্ত রাউটার ও নেটওয়ার্কিং গ্যাজেট কিনুন ক্যাশ অন ডেলিভারিতে। ঝাউদিয়া ও কুষ্টিয়ায় ফ্রি সেটআপ।">
-<meta property="og:url" content="https://rjnetworkjh.github.io/store.html">
-<meta property="og:image" content="https://rjnetworkjh.github.io/logo.png">
-<link rel="icon" type="image/png" href="logo.png">
-<link rel="apple-touch-icon" href="logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Baloo+Da+2:wght@700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-  :root{
-    --bg:#050912;
-    --bg-2:#0a1120;
-    --surface:rgba(255,255,255,0.055);
-    --surface-strong:rgba(255,255,255,0.09);
-    --border:rgba(255,255,255,0.10);
-    --text:#e9f1fa;
-    --text-dim:#93a4bd;
-    --cyan:#22d3ee;
-    --violet:#8b80ff;
-    --node:rgba(140,180,255,0.35);
-    --line:rgba(140,180,255,0.14);
-    --shadow: 0 8px 40px rgba(0,0,0,0.45);
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0;scroll-behavior:smooth;}
-  body{
-    font-family:'Hind Siliguri', sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    min-height:100vh;
-    overflow-x:hidden;
-  }
-  .font-display{ font-family:'Baloo Da 2', 'Hind Siliguri', sans-serif; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>অনলাইন স্টোর | RJ NETWORK — রাউটার, ONU, মিনি UPS ও নেটওয়ার্কিং ডিভাইস</title>
+  <meta name="description" content="RJ NETWORK অনলাইন স্টোর — Ruijie, Cudy, Tenda, TP-Link রাউটার, VSOL/C-Data XPON ONU, WGP Mini UPS ও নেটওয়ার্কিং এক্সেসরিজ। ঝাউদিয়া ও কুষ্টিয়া সদরে ক্যাশ অন ডেলিভারি।">
+  <meta name="theme-color" content="#030914">
+  <link rel="canonical" href="https://rjnetworkjh.github.io/store.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="bn_BD">
+  <meta property="og:site_name" content="RJ NETWORK">
+  <meta property="og:title" content="RJ NETWORK | Store — রাউটার, ONU ও মিনি UPS">
+  <meta property="og:description" content="অরিজিনাল রাউটার, ONU, মিনি UPS ও ক্যাবল কিনুন ক্যাশ অন ডেলিভারিতে। ঝাউদিয়া, কুষ্টিয়া সদর।">
+  <meta property="og:url" content="https://rjnetworkjh.github.io/store.html">
+  <meta property="og:image" content="https://rjnetworkjh.github.io/logo.png">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Baloo+Da+2:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-  #netbg{ position:fixed; inset:0; width:100%; height:100%; z-index:0; opacity:.55; pointer-events:none; }
-  .bg-wash{
-    position:fixed; inset:0; z-index:0; pointer-events:none;
-    background:
-      radial-gradient(60% 45% at 15% 0%, color-mix(in srgb, var(--violet) 16%, transparent), transparent 60%),
-      radial-gradient(50% 40% at 100% 15%, color-mix(in srgb, var(--cyan) 18%, transparent), transparent 60%),
-      var(--bg-2);
-  }
+  <!-- তোমার বিদ্যমান প্রোডাক্ট ও কার্ট স্ক্রিপ্ট -->
+  <script src="products.js"></script>
+  <script src="cart.js" defer></script>
 
-  .glass{
-    background:var(--surface);
-    border:1px solid var(--border);
-    backdrop-filter: blur(20px) saturate(140%);
-    -webkit-backdrop-filter: blur(20px) saturate(140%);
-    box-shadow: var(--shadow);
-  }
-  .glass-strong{
-    background:var(--surface-strong);
-    border:1px solid var(--border);
-    backdrop-filter: blur(24px) saturate(150%);
-    -webkit-backdrop-filter: blur(24px) saturate(150%);
-    box-shadow: var(--shadow);
-  }
-
-  .btn-primary{
-    background: linear-gradient(135deg, var(--cyan), var(--violet));
-    color:#04121c; font-weight:700; border-radius:14px;
-    box-shadow: 0 8px 20px color-mix(in srgb, var(--cyan) 28%, transparent);
-    transition: transform .15s ease, box-shadow .15s ease;
-    cursor:pointer; border:none;
-  }
-  .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 12px 26px color-mix(in srgb, var(--cyan) 40%, transparent); }
-
-  .wa-btn{
-    background:#128c4a; color:#fff; font-weight:700; border-radius:14px;
-    transition: transform .15s ease, filter .15s ease;
-    text-decoration:none; display:inline-flex; align-items:center; justify-content:center;
-  }
-  .wa-btn:hover{ transform: translateY(-2px); filter:brightness(1.08); }
-
-  /* Header adjustments */
-  .site-header-inner{ row-gap:10px; }
-  .phone-pill span, .store-pill span{ white-space:nowrap; }
-  @media (max-width:480px){
-    .site-logo{ width:38px !important; height:38px !important; }
-    .site-title{ font-size:15px !important; }
-    .site-address{ font-size:10.5px !important; max-width:150px; }
-    .phone-pill, .store-pill{ padding:8px !important; }
-    .phone-pill span{ display:none; }
-    .header-social{ width:34px !important; height:34px !important; }
-  }
-
-  /* Category Tabs */
-  .cat-scroll{ display:flex; gap:8px; overflow-x:auto; padding-bottom:4px; scrollbar-width:none; }
-  .cat-scroll::-webkit-scrollbar{ display:none; }
-  .cat-btn{
-    flex-shrink:0; padding:9px 16px; border-radius:999px; font-size:14px; font-weight:600;
-    color:var(--text-dim); border:1px solid var(--border); background:var(--surface);
-    cursor:pointer; transition:all .18s ease;
-  }
-  .cat-btn:hover{ color:var(--text); border-color:color-mix(in srgb, var(--cyan) 50%, var(--border)); }
-  .cat-btn.active{
-    background: linear-gradient(135deg, var(--cyan), var(--violet));
-    color:#04121c; border-color:transparent; font-weight:700;
-    box-shadow: 0 6px 16px color-mix(in srgb, var(--cyan) 30%, transparent);
-  }
-
-  /* Product Grid & Cards */
-  .product-grid{
-    display:grid; grid-template-columns:repeat(2, 1fr); gap:12px;
-  }
-  @media (min-width:640px){ .product-grid{ grid-template-columns:repeat(3, 1fr); gap:16px; } }
-  @media (min-width:1024px){ .product-grid{ grid-template-columns:repeat(4, 1fr); gap:18px; } }
-
-  .prod-card{
-    border-radius:22px; overflow:hidden; display:flex; flex-direction:column;
-    transition: transform .2s ease, border-color .2s ease;
-  }
-  .prod-card:hover{
-    transform: translateY(-4px);
-    border-color: color-mix(in srgb, var(--cyan) 55%, var(--border));
-  }
-  .prod-img-box{
-    position:relative; aspect-ratio:1/1; width:100%;
-    background: radial-gradient(circle at center, rgba(255,255,255,0.09), rgba(255,255,255,0.02));
-    display:flex; align-items:center; justify-content:center; padding:16px;
-    border-bottom:1px solid var(--border);
-  }
-  .prod-img-box img{
-    max-width:85%; max-height:85%; object-fit:contain;
-    transition: transform .25s ease;
-    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.45));
-  }
-  .prod-card:hover .prod-img-box img{ transform: scale(1.06); }
-
-  .badge-top-left{
-    position:absolute; top:10px; left:10px;
-    padding:3px 9px; border-radius:999px; font-size:11px; font-weight:700;
-    background: rgba(5,9,18,0.82); color:var(--cyan);
-    border:1px solid color-mix(in srgb, var(--cyan) 40%, transparent);
-    backdrop-filter: blur(8px);
-  }
-  .badge-top-right{
-    position:absolute; top:10px; right:10px;
-    padding:3px 8px; border-radius:999px; font-size:10.5px; font-weight:700;
-    background: color-mix(in srgb, var(--violet) 25%, rgba(5,9,18,0.85)); color:#d8d4ff;
-    border:1px solid color-mix(in srgb, var(--violet) 45%, transparent);
-  }
-
-  /* Form inputs */
-  .field-input{
-    width:100%;
-    background: rgba(10, 17, 32, 0.85);
-    border:1px solid var(--border);
-    color:var(--text);
-    border-radius:14px;
-    padding:11px 14px;
-    font-size:15.5px;
-    outline:none;
-    font-family:'Hind Siliguri', sans-serif;
-    transition: border-color .2s ease, box-shadow .2s ease;
-  }
-  .field-input:focus{
-    border-color: var(--cyan);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--cyan) 22%, transparent);
-  }
-
-  /* Modal */
-  .modal-backdrop{
-    position:fixed; inset:0; z-index:60;
-    background: rgba(3, 6, 14, 0.82);
-    backdrop-filter: blur(10px);
-    display:none; align-items:center; justify-content:center; padding:16px;
-  }
-  .modal-backdrop.open{ display:flex; animation: fadeIn .2s ease; }
-  @keyframes fadeIn{ from{opacity:0} to{opacity:1} }
-
-  /* Mobile bottom bar */
-  .mobile-bar{ display:none; }
-  @media (max-width:639px){
-    body{ padding-bottom:76px; }
-    .mobile-bar{
-      display:grid; grid-template-columns:1fr 1fr 1.1fr; gap:8px; position:fixed; left:0; right:0; bottom:0; z-index:40;
-      padding:8px 10px calc(8px + env(safe-area-inset-bottom, 0px));
-      background:rgba(5,9,18,.94); backdrop-filter:blur(14px);
-      border-top:1px solid var(--border);
+  <style>
+    :root{
+      --bg:#030914;
+      --panel:rgba(8,22,40,.80);
+      --panel-strong:rgba(12,30,54,.88);
+      --border:rgba(148,163,184,.14);
+      --cyan:#22d3ee;
+      --blue:#38bdf8;
+      --violet:#8b5cf6;
+      --text:#f1f5f9;
+      --muted:#94a3b8;
     }
-    .mobile-bar a{
-      display:flex; align-items:center; justify-content:center; gap:6px; padding:10px 6px; border-radius:12px;
-      font-size:13.5px; font-weight:700; color:var(--text); border:1px solid var(--border); background:var(--surface);
-      text-decoration:none;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 12% 6%,rgba(34,211,238,.12),transparent 30%),
+        radial-gradient(circle at 88% 15%,rgba(139,92,246,.14),transparent 32%),
+        var(--bg);
+      font-family:"Hind Siliguri",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans Bengali",sans-serif;
+      min-height:100vh;
     }
-    .mobile-bar a.primary{ background:linear-gradient(135deg,var(--cyan),var(--violet)); color:#04121c; border-color:transparent; }
-  }
+    .font-display{ font-family:"Baloo Da 2","Hind Siliguri",sans-serif; }
+    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
 
-  .brand-bar{ display:flex; align-items:center; justify-content:center; margin-top:14px; }
-  .brand-bar img{ width:100%; max-width:140px; height:auto; object-fit:contain; }
-</style>
+    .glass{
+      background:var(--panel);
+      border:1px solid var(--border);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+    }
+    .glass-strong{
+      background:var(--panel-strong);
+      border:1px solid rgba(56,189,248,.18);
+      backdrop-filter:blur(22px);
+      -webkit-backdrop-filter:blur(22px);
+    }
+
+    /* Category Scroll */
+    .cat-scroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+    .cat-scroll::-webkit-scrollbar{display:none}
+    .cat-btn{
+      flex-shrink:0;padding:8px 15px;border-radius:999px;font-size:14px;font-weight:700;
+      color:var(--muted);background:var(--panel);border:1px solid var(--border);
+      transition:all .18s ease;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
+    }
+    .cat-btn:hover{color:var(--text);border-color:rgba(34,211,238,.45)}
+    .cat-btn.active{
+      background:linear-gradient(135deg,var(--cyan),var(--violet));
+      color:#030914;border-color:transparent;
+      box-shadow:0 6px 18px rgba(34,211,238,.28);
+    }
+    .cat-btn .count{
+      font-size:11px;padding:1px 7px;border-radius:999px;
+      background:rgba(255,255,255,.1);color:inherit;
+    }
+    .cat-btn.active .count{background:rgba(3,9,20,.18);color:#030914}
+
+    /* Product Card */
+    .prod-card{
+      border-radius:22px;overflow:hidden;display:flex;flex-direction:column;
+      transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+    }
+    .prod-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(34,211,238,.48);
+      box-shadow:0 14px 32px rgba(0,0,0,.45);
+    }
+    .prod-thumb{
+      position:relative;aspect-ratio:1/1;
+      background:
+        radial-gradient(circle at 50% 45%,rgba(34,211,238,.12),transparent 42%),
+        linear-gradient(145deg,#071827,#0b233b);
+      overflow:hidden;display:block;
+    }
+    .prod-thumb img{
+      width:100%;height:100%;object-fit:contain;padding:14px;
+      transition:transform .3s ease;
+    }
+    .prod-card:hover .prod-thumb img{transform:scale(1.06)}
+
+    .spec-pill{
+      font-size:11px;padding:2px 8px;border-radius:6px;
+      background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+      color:#cbd5e1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;
+    }
+
+    .order-btn{
+      background:linear-gradient(135deg,#10b981,#22c55e);color:#03130c;
+      font-weight:800;transition:filter .15s ease,transform .15s ease;cursor:pointer;
+    }
+    .order-btn:hover{filter:brightness(1.08)}
+    .wa-btn{background:#128c4a;color:#fff;font-weight:700;transition:filter .15s ease}
+    .wa-btn:hover{filter:brightness(1.1)}
+
+    /* Inputs */
+    .store-input{
+      background:rgba(7,20,38,.85);border:1px solid rgba(148,163,184,.2);
+      color:var(--text);border-radius:14px;outline:none;transition:border-color .2s ease;
+    }
+    .store-input:focus{border-color:var(--cyan)}
+    .store-input option{background:#071827;color:var(--text)}
+
+    /* Mobile bottom quick bar */
+    .mobile-bar{display:none}
+    @media (max-width:639px){
+      body{padding-bottom:76px}
+      .mobile-bar{
+        display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:8px;
+        position:fixed;left:0;right:0;bottom:0;z-index:40;
+        padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));
+        background:rgba(3,9,20,.95);backdrop-filter:blur(14px);
+        border-top:1px solid rgba(148,163,184,.16);
+      }
+      .mobile-bar a,.mobile-bar button{
+        display:flex;align-items:center;justify-content:center;gap:6px;
+        padding:10px 6px;border-radius:12px;font-size:13.5px;font-weight:700;
+        color:var(--text);border:1px solid var(--border);background:var(--panel);
+      }
+      .mobile-bar .primary{
+        background:linear-gradient(135deg,var(--cyan),var(--violet));
+        color:#030914;border-color:transparent;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="bg-wash"></div>
-<canvas id="netbg"></canvas>
+  <!-- Top Offer Strip -->
+  <div class="text-center text-xs sm:text-sm py-1.5 px-3 font-semibold border-b border-cyan-400/15 bg-gradient-to-r from-cyan-500/15 via-violet-500/15 to-cyan-500/15 text-slate-200">
+    🚚 ঝাউদিয়া ও কুষ্টিয়া সদরে ক্যাশ অন ডেলিভারি এবং ফ্রি রাউটার কনফিগারেশন সুবিধা!
+  </div>
 
-<!-- Top Announcement Strip -->
-<div class="relative z-30 text-center text-xs sm:text-sm py-1.5 px-3 font-semibold" style="background:linear-gradient(90deg, rgba(34,211,238,0.16), rgba(139,128,255,0.16)); border-bottom:1px solid var(--border); color:var(--text)">
-  🚚 ঝাউদিয়া ও কুষ্টিয়া সদরে ক্যাশ অন ডেলিভারি এবং ফ্রি রাউটার কনফিগারেশন সুবিধা!
-</div>
-
-<!-- Header -->
-<header class="sticky top-0 z-30 glass-strong" style="border-bottom:1px solid var(--border)">
-  <div class="max-w-6xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3">
-    <div class="site-header-inner flex items-center justify-between gap-3">
-
-      <!-- Logo & Title -->
-      <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 min-w-0" style="text-decoration:none">
-        <img src="logo.png" alt="RJ NETWORK লোগো" width="52" height="52" class="site-logo w-11 h-11 sm:w-12 sm:h-12 object-contain flex-shrink-0 rounded-xl">
-        <div class="min-w-0">
-          <div class="site-title font-display font-bold text-lg sm:text-xl tracking-tight leading-tight flex items-center gap-2" style="color:var(--text)">
-            RJ NETWORK
-            <span class="text-[11px] font-bold px-2 py-0.5 rounded-full" style="background:color-mix(in srgb, var(--cyan) 18%, transparent); color:var(--cyan); border:1px solid color-mix(in srgb, var(--cyan) 35%, transparent)">STORE</span>
+  <!-- Header (product.html এর সাথে সামঞ্জস্যপূর্ণ) -->
+  <header class="sticky top-0 z-50 border-b border-cyan-400/10 bg-[#030914]/85 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3">
+      <div class="flex items-center justify-between gap-3">
+        <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+          <img src="logo.png" alt="RJ NETWORK লোগো" width="52" height="52" class="w-11 h-11 sm:w-13 sm:h-13 object-contain flex-shrink-0 rounded-xl">
+          <div class="min-w-0">
+            <div class="font-display font-extrabold tracking-wide text-lg sm:text-xl truncate flex items-center gap-2">
+              <span>RJ NETWORK</span>
+              <span class="px-2 py-0.5 rounded-full text-[11px] font-black bg-cyan-400/15 text-cyan-300 border border-cyan-400/30">STORE</span>
+            </div>
+            <div class="text-[11px] sm:text-xs text-slate-400 truncate">কানেক্ট থাকুন সেরা ডিভাইসে • ঝাউদিয়া, কুষ্টিয়া</div>
           </div>
-          <p class="site-address text-xs truncate" style="color:var(--text-dim); max-width:220px">
-            ঝাউদিয়া বলফিল্ড মোড়, কুষ্টিয়া সদর
+        </a>
+
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <a href="index.html" class="px-3 py-2 rounded-xl glass text-xs sm:text-sm font-bold hover:border-cyan-400/40 hover:text-cyan-300 transition">
+            ← হোম
+          </a>
+          <button type="button" data-cart-open aria-label="কার্ট খুলুন" class="px-3 py-2 rounded-xl glass text-xs sm:text-sm font-bold hover:border-cyan-400/40 transition inline-flex items-center gap-1.5 cursor-pointer">
+            <span>🛒</span><span class="hidden sm:inline">কার্ট</span>
+            <span data-cart-count class="rjc-badge" style="display:none">0</span>
+          </button>
+          <a href="tel:09639019016" class="hidden md:inline-flex px-3.5 py-2 rounded-xl bg-cyan-400/15 border border-cyan-400/25 text-cyan-300 text-sm font-bold hover:bg-cyan-400/20 transition">
+            📞 09639-019016
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+
+    <!-- Compact Hero Banner -->
+    <section class="glass-strong rounded-3xl p-5 sm:p-8 mb-7 relative overflow-hidden">
+      <div class="grid lg:grid-cols-12 gap-6 items-center">
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-300/25 text-cyan-300 text-xs font-bold mb-3">
+            ⚡ অরিজিনাল নেটওয়ার্কিং ডিভাইস • ক্যাশ অন ডেলিভারি
+          </div>
+          <h1 class="font-display font-extrabold text-2xl sm:text-4xl leading-tight">
+            হাই-স্পিড ওয়াই-ফাই রাউটার, ONU ও মিনি UPS স্টোর
+          </h1>
+          <p class="text-slate-300 text-sm sm:text-base mt-2.5 max-w-2xl leading-relaxed">
+            Ruijie, Cudy, Tenda রাউটার থেকে শুরু করে VSOL/C-Data XPON ONU এবং লোডশেডিং ব্যাকআপের জন্য WGP Mini UPS — সবকিছু পাচ্ছেন সাশ্রয়ী দামে।
+          </p>
+
+          <!-- Search & Sort Controls -->
+          <div class="mt-5 flex flex-col sm:flex-row gap-2.5 max-w-xl">
+            <div class="relative flex-1">
+              <input type="search" id="searchInput" class="store-input w-full py-2.5 pl-10 pr-4 text-sm sm:text-base" placeholder="রাউটার, ONU, মিনি UPS বা মডেল লিখুন...">
+              <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+              </svg>
+            </div>
+            <select id="sortSelect" aria-label="সাজান" class="store-input py-2.5 px-3.5 text-sm font-semibold cursor-pointer">
+              <option value="default">সাজান: ডিফল্ট</option>
+              <option value="price-asc">দাম: কম থেকে বেশি</option>
+              <option value="price-desc">দাম: বেশি থেকে কম</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="lg:col-span-5 grid grid-cols-2 gap-3">
+          <div class="glass rounded-2xl p-3.5">
+            <div class="text-xl mb-1">🛠️</div>
+            <div class="font-bold text-sm text-slate-100">ফ্রি সেটআপ সুবিধা</div>
+            <div class="text-xs text-slate-400 mt-0.5">আমাদের টেকনিশিয়ান কনফিগার করে দেবে</div>
+          </div>
+          <div class="glass rounded-2xl p-3.5">
+            <div class="text-xl mb-1">💵</div>
+            <div class="font-bold text-sm text-slate-100">ক্যাশ অন ডেলিভারি</div>
+            <div class="text-xs text-slate-400 mt-0.5">পণ্য হাতে পেয়ে টাকা পরিশোধ করুন</div>
+          </div>
+          <div class="glass rounded-2xl p-3.5">
+            <div class="text-xl mb-1">🔋</div>
+            <div class="font-bold text-sm text-slate-100">পাওয়ার ব্যাকআপ</div>
+            <div class="text-xs text-slate-400 mt-0.5">কারেন্ট গেলেও চলবে ওয়াই-ফাই</div>
+          </div>
+          <div class="glass rounded-2xl p-3.5">
+            <div class="text-xl mb-1">📍</div>
+            <div class="font-bold text-sm text-slate-100">স্থানীয় সাপোর্ট</div>
+            <div class="text-xs text-slate-400 mt-0.5">ঝাউদিয়া বলফিল্ড মোড় অফিস</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Filter Bar -->
+    <section aria-label="ক্যাটাগরি ফিল্টার" class="mb-6">
+      <div class="cat-scroll" id="categoryBar"></div>
+    </section>
+
+    <!-- Active Filter Info -->
+    <div class="flex items-center justify-between mb-4 px-1 text-xs sm:text-sm text-slate-400">
+      <div id="resultSummary">সব পণ্য দেখানো হচ্ছে</div>
+      <button type="button" id="resetFilterBtn" class="hidden text-cyan-300 font-bold hover:underline cursor-pointer">ফিল্টার রিসেট করুন</button>
+    </div>
+
+    <!-- Products Grid -->
+    <section aria-label="প্রোডাক্ট তালিকা">
+      <div id="productsGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5"></div>
+
+      <!-- Empty Search State -->
+      <div id="emptyState" class="hidden glass rounded-3xl p-10 sm:p-14 text-center">
+        <div class="text-5xl mb-3">🔍</div>
+        <h2 class="text-xl font-black">কোনো পণ্য পাওয়া যায়নি</h2>
+        <p class="text-slate-400 text-sm mt-1">অন্য মডেল বা নাম লিখে খুঁজুন, অথবা সব পণ্য দেখুন।</p>
+        <button type="button" onclick="resetAllFilters()" class="mt-5 px-5 py-2.5 rounded-xl bg-cyan-400 text-slate-950 font-black text-sm cursor-pointer">
+          সব পণ্য দেখুন
+        </button>
+      </div>
+    </section>
+
+    <!-- Smart Router Buying Guide -->
+    <section class="glass-strong rounded-3xl p-5 sm:p-7 mt-12">
+      <h2 class="font-display font-bold text-xl sm:text-2xl">🤔 কোন ডিভাইসটি আপনার জন্য সেরা?</h2>
+      <p class="text-slate-400 text-sm mt-1 mb-4">আপনার ইন্টারনেট প্যাকেজ ও বাসার প্রয়োজন অনুযায়ী বেছে নিন:</p>
+      <div class="grid sm:grid-cols-3 gap-3 text-sm">
+        <div class="glass rounded-2xl p-4">
+          <div class="font-bold text-cyan-300 mb-1">৩০ – ৪০ Mbps প্যাকেজ</div>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            সাধারণ ব্যবহার ও ২-৩ রুমের জন্য <b>Tenda F3 / F6</b> বা <b>Mercusys MW325R (300Mbps)</b> বাজেট সেরা।
           </p>
         </div>
-      </a>
-
-      <!-- Right Actions -->
-      <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-        <a href="index.html" class="store-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full glass text-xs sm:text-sm font-semibold" style="color:var(--text); text-decoration:none">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-          <span>হোমপেজ</span>
-        </a>
-
-        <a href="tel:09639019016" class="phone-pill flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs sm:text-sm font-semibold" style="color:var(--cyan); text-decoration:none">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          <span>09639-019016</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-16">
-
-  <!-- Compact Store Hero Banner -->
-  <section class="glass-strong rounded-3xl p-5 sm:p-8 mb-7 relative overflow-hidden">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-      <div class="md:col-span-8">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-3" style="background:rgba(34,211,238,0.12); color:var(--cyan); border:1px solid rgba(34,211,238,0.28)">
-          ⚡ অরিজিনাল প্রোডাক্ট • অফিসিয়াল ওয়ারেন্টি
+        <div class="glass rounded-2xl p-4">
+          <div class="font-bold text-cyan-300 mb-1">৫০ – ১০০ Mbps প্যাকেজ</div>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            পুরো স্পিড, গেমিং ও বাফারিংহীন 4K ভিডিওর জন্য <b>Cudy WR1200 / WR1300</b> বা <b>Ruijie Dual-Band</b> রাউটার নিন।
+          </p>
         </div>
-        <h1 class="font-display font-extrabold text-2xl sm:text-4xl leading-tight mb-2" style="color:var(--text)">
-          হাই-স্পিড ওয়াই-ফাই রাউটার ও নেটওয়ার্কিং স্টোর
-        </h1>
-        <p class="text-sm sm:text-base mb-5 max-w-xl" style="color:var(--text-dim)">
-          আপনার ইন্টারনেট স্পিডের সম্পূর্ণ পারফরম্যান্স পেতে বেছে নিন সেরা মানের Dual-Band রাউটার, XPON ONU এবং কারেন্ট গেলেও ওয়াই-ফাই চালু রাখার মিনি UPS।
-        </p>
-
-        <!-- Search Box -->
-        <div class="relative max-w-md">
-          <input type="search" id="searchInput" class="field-input pl-10" placeholder="রাউটার, ONU বা মিনি UPS খুঁজুন...">
-          <svg class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2" style="color:var(--text-dim)" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
-          </svg>
+        <div class="glass rounded-2xl p-4">
+          <div class="font-bold text-cyan-300 mb-1">কারেন্ট গেলেও ইন্টারনেট</div>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            লোডশেডিংয়ে রাউটার ও ONU একসাথে চালু রাখতে <b>WGP Mini UPS (10400mAh)</b> ব্যবহার করুন।
+          </p>
         </div>
       </div>
+    </section>
 
-      <!-- Trust Highlights -->
-      <div class="md:col-span-4 grid grid-cols-2 md:grid-cols-1 gap-2.5">
-        <div class="glass rounded-2xl p-3.5 flex items-center gap-3">
-          <span class="text-xl">🛠️</span>
-          <div>
-            <p class="font-bold text-sm" style="color:var(--text)">ফ্রি সেটআপ ও কনফিগ</p>
-            <p class="text-xs" style="color:var(--text-dim)">আমাদের টেকনিশিয়ান সেটআপ করে দেবে</p>
-          </div>
-        </div>
-        <div class="glass rounded-2xl p-3.5 flex items-center gap-3">
-          <span class="text-xl">💵</span>
-          <div>
-            <p class="font-bold text-sm" style="color:var(--text)">ক্যাশ অন ডেলিভারি</p>
-            <p class="text-xs" style="color:var(--text-dim)">পণ্য হাতে পেয়ে টাকা পরিশোধ করুন</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Category Filter Tabs -->
-  <section class="mb-6">
-    <div class="cat-scroll" id="categoryTabs">
-      <button type="button" class="cat-btn active" data-cat="all">সব পণ্য</button>
-      <button type="button" class="cat-btn" data-cat="router">📡 Wi-Fi রাউটার</button>
-      <button type="button" class="cat-btn" data-cat="onu">🔌 XPON / GPON ONU</button>
-      <button type="button" class="cat-btn" data-cat="ups">🔋 মিনি রাউটার UPS</button>
-      <button type="button" class="cat-btn" data-cat="accessory">🔗 ক্যাবল ও এক্সেসরিজ</button>
-    </div>
-  </section>
-
-  <!-- Product Grid -->
-  <section aria-label="প্রোডাক্ট তালিকা">
-    <div id="productGrid" class="product-grid"></div>
-    <div id="emptyState" class="hidden text-center py-12 glass rounded-3xl">
-      <p class="text-lg font-bold mb-1" style="color:var(--text)">কোনো পণ্য খুঁজে পাওয়া যায়নি</p>
-      <p class="text-sm" style="color:var(--text-dim)">অন্য নাম লিখে সার্চ করুন অথবা ক্যাটাগরি পরিবর্তন করুন।</p>
-    </div>
-  </section>
-
-  <!-- Smart Buying Guide -->
-  <section class="glass-strong rounded-3xl p-5 sm:p-7 mt-10">
-    <h2 class="font-display font-bold text-xl sm:text-2xl mb-1" style="color:var(--text)">🤔 কোন রাউটারটি আপনার জন্য সেরা?</h2>
-    <p class="text-sm mb-4" style="color:var(--text-dim)">প্যাকেজ ও বাসার সাইজ অনুযায়ী সঠিক রাউটার বেছে নিন:</p>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-      <div class="glass rounded-2xl p-4">
-        <p class="font-bold mb-1" style="color:var(--cyan)">৩০ – ৪০ Mbps প্যাকেজ</p>
-        <p style="color:var(--text-dim)">ছোট ফ্ল্যাট বা ২-৩ রুমের বাসার জন্য <b style="color:var(--text)">300Mbps Single-Band</b> রাউটার যথেষ্ট।</p>
-      </div>
-      <div class="glass rounded-2xl p-4">
-        <p class="font-bold mb-1" style="color:var(--cyan)">৫০ – ১০০ Mbps প্যাকেজ</p>
-        <p style="color:var(--text-dim)">পুরো স্পিড, গেমিং ও 4K স্ট্রিমিংয়ের জন্য অবশ্যই <b style="color:var(--text)">AC1200 Dual-Band (5GHz)</b> রাউটার নিন।</p>
-      </div>
-      <div class="glass rounded-2xl p-4">
-        <p class="font-bold mb-1" style="color:var(--cyan)">লোডশেডিং সমাধান</p>
-        <p style="color:var(--text-dim)">কারেন্ট গেলেও রাউটার ও ONU একসাথে ৪-৬ ঘণ্টা চালু রাখতে <b style="color:var(--text)">Mini Router UPS</b> ব্যবহার করুন।</p>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="text-center mt-10 text-[13.5px]" style="color:var(--text-dim)">
-    <p class="font-display font-bold text-lg mb-1" style="color:var(--text)">RJ NETWORK</p>
-    <p>প্রোঃ মোঃ রাজু আহম্মেদ</p>
-    <p>📍 ঝাউদিয়া বলফিল্ড মোড়, কুষ্টিয়া সদর, কুষ্টিয়া।</p>
-    <p class="mt-1">Hotline : <a href="tel:09639019016" class="font-semibold" style="color:var(--cyan)">09639-019016</a></p>
-    <div class="flex justify-center gap-4 mt-3 font-semibold">
-      <a href="index.html" style="color:var(--text-dim)">হোমপেজ</a>
-      <a href="index.html#packages" style="color:var(--text-dim)">প্যাকেজ</a>
-      <a href="index.html#bill" style="color:var(--text-dim)">বিল পরিশোধ</a>
-      <a href="router-login.html" style="color:var(--text-dim)">রাউটার লগইন</a>
-    </div>
-    <p class="mt-3">© <span id="year"></span> RJ NETWORK — All rights reserved.</p>
-    <p class="mt-1 font-semibold" style="color: red;">DEVELOPED BY — RAKIBUL ISLAM RABBI</p>
-    <div class="brand-bar">
-      <a href="https://linktr.ee/rakibulislamrabbi" target="_blank" rel="noopener">
-        <img src="Rabbi.png" alt="Rakibul Islam Rabbi" loading="lazy">
-      </a>
+  <footer class="border-t border-cyan-400/10 mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 text-center text-sm text-slate-400">
+      <div class="font-display font-extrabold text-slate-100 text-lg">RJ NETWORK | Store</div>
+      <div class="mt-1">প্রোঃ মোঃ রাজু আহম্মেদ</div>
+      <div class="mt-1">📍 ঝাউদিয়া বলফিল্ড মোড়, কুষ্টিয়া সদর, কুষ্টিয়া</div>
+      <div class="mt-1">Hotline: <a href="tel:09639019016" class="text-cyan-300 font-bold">09639-019016</a></div>
+      <div class="flex flex-wrap justify-center gap-4 mt-3 text-xs sm:text-sm font-semibold">
+        <a href="index.html" class="hover:text-cyan-300">হোমপেজ</a>
+        <a href="index.html#packages" class="hover:text-cyan-300">প্যাকেজ ও দাম</a>
+        <a href="index.html#bill" class="hover:text-cyan-300">বিল পরিশোধ</a>
+        <a href="router-login.html" class="hover:text-cyan-300">রাউটার লগইন</a>
+      </div>
+      <div class="mt-4 text-xs text-slate-500">© <span id="year"></span> RJ NETWORK — All rights reserved.</div>
+      <div class="mt-1 text-xs font-bold text-red-500">DEVELOPED BY — RAKIBUL ISLAM RABBI</div>
     </div>
   </footer>
 
-</main>
+  <!-- Mobile Bottom Quick Bar -->
+  <div class="mobile-bar">
+    <a href="tel:09639019016">📞 কল</a>
+    <a href="https://wa.me/8801714019016?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20RJ%20NETWORK%20Store%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%A1%E0%A6%BE%E0%A6%95%E0%A7%8D%E0%A6%9F%20%E0%A6%95%E0%A6%BF%E0%A6%A8%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" rel="noopener">💬 WhatsApp</a>
+    <button type="button" data-cart-open class="primary">🛒 কার্ট (<span data-cart-count>0</span>)</button>
+  </div>
 
-<!-- Quick Order Modal -->
-<div id="orderModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="glass-strong rounded-3xl w-full max-w-md p-5 sm:p-6 relative" style="background:#0b1324; border:1px solid rgba(34,211,238,0.3)">
-    <button type="button" id="closeModalBtn" class="w-8 h-8 rounded-full glass flex items-center justify-center absolute top-4 right-4 text-sm font-bold" style="color:var(--text)" aria-label="বন্ধ করুন">✕</button>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    <div id="modalFormWrap">
-      <span class="text-xs font-bold px-2.5 py-1 rounded-full" style="background:rgba(34,211,238,0.15); color:var(--cyan)">ক্যাশ অন ডেলিভারি অর্ডার</span>
-      <h3 id="modalTitle" class="font-display font-bold text-xl mt-2" style="color:var(--text)">অর্ডার কনফার্ম করুন</h3>
+    const ALL_PRODUCTS = Array.isArray(PRODUCTS) ? PRODUCTS : [];
+    const grid = document.getElementById('productsGrid');
+    const emptyState = document.getElementById('emptyState');
+    const categoryBar = document.getElementById('categoryBar');
+    const searchInput = document.getElementById('searchInput');
+    const sortSelect = document.getElementById('sortSelect');
+    const resultSummary = document.getElementById('resultSummary');
+    const resetFilterBtn = document.getElementById('resetFilterBtn');
 
-      <!-- Selected Product Summary -->
-      <div class="glass rounded-2xl p-3 my-3 flex items-center justify-between gap-2">
-        <div>
-          <p id="modalProdName" class="font-bold text-sm" style="color:var(--text)"></p>
-          <p id="modalProdSpec" class="text-xs" style="color:var(--text-dim)"></p>
-        </div>
-        <p id="modalProdPrice" class="font-display font-extrabold text-lg flex-shrink-0" style="color:var(--cyan)"></p>
-      </div>
+    let selectedCategory = 'all';
 
-      <form id="storeOrderForm" class="space-y-3.5">
-        <div>
-          <label class="text-xs font-semibold block mb-1" style="color:var(--text)">আপনার নাম *</label>
-          <input type="text" id="custName" class="field-input" placeholder="পূর্ণ নাম লিখুন" required>
-        </div>
-        <div>
-          <label class="text-xs font-semibold block mb-1" style="color:var(--text)">মোবাইল নম্বর *</label>
-          <input type="tel" id="custPhone" class="field-input" placeholder="01XXXXXXXXX" inputmode="tel" required>
-        </div>
-        <div>
-          <label class="text-xs font-semibold block mb-1" style="color:var(--text)">ডেলিভারি ঠিকানা *</label>
-          <textarea id="custAddress" rows="2" class="field-input" placeholder="গ্রাম/এলাকা, বাজার বা পরিচিত স্থান" required></textarea>
-        </div>
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="text-xs font-semibold block mb-1" style="color:var(--text)">পরিমাণ</label>
-            <select id="custQty" class="field-input">
-              <option value="1">১ টি</option>
-              <option value="2">২ টি</option>
+    function taka(n){ return '৳ ' + Number(n).toLocaleString('en-BD'); }
+    function esc(str){ return String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+    // ক্যাটাগরি লিস্ট (products.js এর category অনুযায়ী)
+    const CATEGORIES = [
+      { id: 'all', label: 'সব পণ্য', icon: '🛍️' },
+      { id: 'router', label: 'রাউটার', icon: '📡' },
+      { id: 'onu', label: 'ONU', icon: '🔌' },
+      { id: 'adapter', label: 'UPS ও Adapter', icon: '🔋' },
+      { id: 'lan', label: 'Cable', icon: '🔗' },
+      { id: 'rj45', label: 'Connector', icon: '🧩' },
+      { id: 'accessories', label: 'Accessories', icon: '🛠️' }
+    ];
+
+    function renderCategories(){
+      categoryBar.innerHTML = CATEGORIES.map(cat => {
+        const count = cat.id === 'all'
+          ? ALL_PRODUCTS.length
+          : ALL_PRODUCTS.filter(p => p.category === cat.id).length;
+        if(cat.id !== 'all' && count === 0) return '';
+        const isActive = selectedCategory === cat.id;
+        return `
+          <button type="button" class="cat-btn ${isActive ? 'active' : ''}" onclick="setCategory('${cat.id}')">
+            <span>${cat.icon}</span>
+            <span>${cat.label}</span>
+            <span class="count">${count}</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    window.setCategory = function(catId){
+      selectedCategory = catId;
+      renderCategories();
+      renderProducts();
+    };
+
+    window.resetAllFilters = function(){
+      selectedCategory = 'all';
+      searchInput.value = '';
+      sortSelect.value = 'default';
+      renderCategories();
+      renderProducts();
+    };
+
+    resetFilterBtn.addEventListener('click', window.resetAllFilters);
+    searchInput.addEventListener('input', renderProducts);
+    sortSelect.addEventListener('change', renderProducts);
+
+    function renderProducts(){
+      const query = searchInput.value.trim().toLowerCase();
+      const sortVal = sortSelect.value;
+
+      let list = ALL_PRODUCTS.filter(p => {
+        const matchCat = selectedCategory === 'all' || p.category === selectedCategory;
+        if(!matchCat) return false;
+        if(!query) return true;
+        const inName = (p.name || '').toLowerCase().includes(query);
+        const inCat = (p.categoryName || '').toLowerCase().includes(query);
+        const inDesc = (p.description || '').toLowerCase().includes(query);
+        const inSpecs = Array.isArray(p.specs) && p.specs.some(s => s.toLowerCase().includes(query));
+        return inName || inCat || inDesc || inSpecs;
+      });
+
+      if(sortVal === 'price-asc'){
+        list = [...list].sort((a, b) => a.price - b.price);
+      } else if(sortVal === 'price-desc'){
+        list = [...list].sort((a, b) => b.price - a.price);
+      }
+
+      const isFiltered = selectedCategory !== 'all' || query !== '' || sortVal !== 'default';
+      resetFilterBtn.classList.toggle('hidden', !isFiltered);
+      resultSummary.textContent = `মোট ${list.length} টি পণ্য দেখানো হচ্ছে`;
+
+      if(!list.length){
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+      emptyState.classList.add('hidden');
+
+      grid.innerHTML = list.map(p => {
+        const imgSrc = (p.images && p.images[0]) ? p.images[0] : 'logo.png';
+        const detailUrl = `product.html?id=${encodeURIComponent(p.id)}`;
+        const topSpecs = Array.isArray(p.specs) ? p.specs.slice(0, 2) : [];
+        const waText = encodeURIComponent(
+          `আসসালামু আলাইকুম RJ NETWORK, আমি এই পণ্যটি অর্ডার করতে চাই:\n📦 ${p.name}\n💰 মূল্য: ${taka(p.price)}\n🔗 ${location.origin}/${detailUrl}`
+        );
+
+        return `
+          <article class="prod-card glass">
+            <a href="${detailUrl}" class="prod-thumb" aria-label="${esc(p.name)}">
+              ${p.badge ? `<span class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-lg text-[10.5px] font-black ${p.badge.includes('HOT') ? 'bg-gradient-to-r from-amber-400 to-rose-500 text-slate-950' : 'bg-cyan-400 text-slate-950'}">${esc(p.badge)}</span>` : ''}
+              <span class="absolute top-2.5 right-2.5 z-10 px-2 py-0.5 rounded-lg text-[10.5px] font-bold bg-[#030914]/80 border border-white/10 text-cyan-300">
+                ${esc(p.categoryName || '')}
+              </span>
+              <img src="${esc(imgSrc)}" alt="${esc(p.name)}" width="400" height="400" loading="lazy" onerror="this.src='logo.png'">
+            </a>
+
+            <div class="p-3 sm:p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <a href="${detailUrl}" class="hover:text-cyan-300 transition">
+                  <h3 class="font-bold text-sm sm:text-[15.5px] leading-snug line-clamp-2">${esc(p.name)}</h3>
+                </a>
+
+                ${topSpecs.length ? `
+                  <div class="flex flex-wrap gap-1 mt-2">
+                    ${topSpecs.map(s => `<span class="spec-pill">${esc(s)}</span>`).join('')}
+                  </div>
+                ` : ''}
+              </div>
+
+              <div class="mt-3 pt-2.5 border-t border-white/10">
+                <div class="flex items-center justify-between gap-1 mb-2.5">
+                  <div>
+                    <span class="text-lg sm:text-xl font-black text-cyan-300">${taka(p.price)}</span>
+                    ${p.unit ? `<span class="text-[11px] text-slate-400"> / ${esc(p.unit)}</span>` : ''}
+                  </div>
+                  <span class="text-[11px] font-bold ${p.stock ? 'text-emerald-400' : 'text-rose-400'}">
+                    ${p.stock ? '● ইন স্টক' : '● স্টক শেষ'}
+                  </span>
+                </div>
+
+                <!-- cart.js এর Add to Cart হুক -->
+                <div data-cart-actions="${esc(p.id)}" data-size="sm" class="mb-2"></div>
+
+                <!-- Direct Buy Now + WhatsApp -->
+                <div class="grid grid-cols-2 gap-1.5">
+                  <button type="button" onclick="window.Cart && Cart.buyNow('${esc(p.id)}')" ${!p.stock ? 'disabled' : ''}
+                    class="order-btn rounded-xl py-2 px-2 text-xs text-center ${!p.stock ? 'opacity-50 cursor-not-allowed' : ''}">
+                    অর্ডার করুন
+                  </button>
+                  <a href="https://wa.me/8801714019016?text=${waText}" target="_blank" rel="noopener"
+                    class="wa-btn rounded-xl py-2 px-2 text-xs text-center inline-flex items-center justify-center gap-1">
+                    💬 WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      // ডাইনামিক কার্ড রেন্ডার হওয়ার পর cart.js বাটনগুলো রি-ইনিশিয়ালাইজ করার জন্য
+      if(window.Cart && typeof Cart.refresh === 'function') Cart.refresh();
+      else if(window.Cart && typeof Cart.init === 'function') Cart.init();
+    }
+
+    // URL-এ ?cat=router থাকলে অটো সিলেক্ট হবে
+    const urlCat = new URLSearchParams(location.search).get('cat');
+    if(urlCat && CATEGORIES.some(c => c.id === urlCat)) selectedCategory = urlCat;
+
+    renderCategories();
+    renderProducts();
+  </script>
+</body>
+</html>
