@@ -155,6 +155,17 @@
     .prod-thumb img{ width:100%;height:100%;object-fit:contain;padding:14px;transition:transform .3s ease; }
     .prod-card:hover .prod-thumb img{transform:scale(1.06)}
 
+    /* Fixed Corner Badges (No Overlap) */
+    .badge-left{
+      position:absolute; top:10px; left:10px; z-index:10;
+      padding:2px 9px; border-radius:8px; font-size:10.5px; font-weight:900;
+    }
+    .badge-right{
+      position:absolute; top:10px; right:10px; z-index:10;
+      padding:2px 9px; border-radius:8px; font-size:10.5px; font-weight:700;
+      background:rgba(3,9,20,.84); border:1px solid rgba(255,255,255,.14); color:var(--cyan);
+    }
+
     .spec-pill{
       font-size:11px;padding:2px 8px;border-radius:6px;
       background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
@@ -486,8 +497,8 @@
           return (
             '<article class="prod-card glass">' +
               '<a href="' + detailUrl + '" class="prod-thumb" aria-label="' + esc(p.name) + '">' +
-                (p.badge ? '<span class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-lg text-[10.5px] font-black ' + badgeClass + '">' + esc(p.badge) + '</span>' : '') +
-                '<span class="absolute top-2.5 right-2.5 z-10 px-2 py-0.5 rounded-lg text-[10.5px] font-bold bg-[#030914]/80 border border-white/10 text-cyan-300">' + esc(p.categoryName || '') + '</span>' +
+                (p.badge ? '<span class="badge-left ' + badgeClass + '">' + esc(p.badge) + '</span>' : '') +
+                '<span class="badge-right">' + esc(p.categoryName || '') + '</span>' +
                 '<img src="' + esc(imgSrc) + '" alt="' + esc(p.name) + '" width="400" height="400" loading="lazy" onerror="this.src=\'logo.png\'">' +
               '</a>' +
               '<div class="p-3 sm:p-4 flex-1 flex flex-col justify-between">' +
