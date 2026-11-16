@@ -7,13 +7,6 @@
   <meta name="description" content="RJ NETWORK অনলাইন স্টোর — Ruijie, Cudy, Tenda, TP-Link রাউটার, VSOL/C-Data XPON ONU, WGP Mini UPS ও নেটওয়ার্কিং এক্সেসরিজ। ঝাউদিয়া ও কুষ্টিয়া সদরে ক্যাশ অন ডেলিভারি।">
   <meta name="theme-color" content="#030914">
   <link rel="canonical" href="https://rjnetworkjh.github.io/store.html">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="bn_BD">
-  <meta property="og:site_name" content="RJ NETWORK">
-  <meta property="og:title" content="RJ NETWORK | Store — রাউটার, ONU ও মিনি UPS">
-  <meta property="og:description" content="অরিজিনাল রাউটার, ONU, মিনি UPS ও ক্যাবল কিনুন ক্যাশ অন ডেলিভারিতে। ঝাউদিয়া, কুষ্টিয়া সদর।">
-  <meta property="og:url" content="https://rjnetworkjh.github.io/store.html">
-  <meta property="og:image" content="https://rjnetworkjh.github.io/logo.png">
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="apple-touch-icon" href="logo.png">
   <link rel="manifest" href="manifest.json">
@@ -28,9 +21,9 @@
   <style>
     :root{
       --bg:#030914;
-      --panel:rgba(8,22,40,.80);
-      --panel-strong:rgba(12,30,54,.88);
-      --border:rgba(148,163,184,.14);
+      --panel:rgba(8,22,40,.82);
+      --panel-strong:rgba(12,30,54,.90);
+      --border:rgba(148,163,184,.16);
       --cyan:#22d3ee;
       --blue:#38bdf8;
       --violet:#8b5cf6;
@@ -51,7 +44,6 @@
     }
     .font-display{ font-family:"Baloo Da 2","Hind Siliguri",sans-serif; }
     a{text-decoration:none;color:inherit}
-    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
 
     .glass{
       background:var(--panel);
@@ -61,7 +53,7 @@
     }
     .glass-strong{
       background:var(--panel-strong);
-      border:1px solid rgba(56,189,248,.18);
+      border:1px solid rgba(56,189,248,.20);
       backdrop-filter:blur(22px);
       -webkit-backdrop-filter:blur(22px);
     }
@@ -74,10 +66,7 @@
       align-items:center;
     }
     @media (min-width:960px){
-      .hero-layout{
-        grid-template-columns:1.35fr 1fr;
-        gap:32px;
-      }
+      .hero-layout{ grid-template-columns:1.35fr 1fr; gap:32px; }
     }
 
     /* Search & Sort Row */
@@ -88,28 +77,13 @@
       margin-top:20px;
       max-width:560px;
     }
-    @media (min-width:600px){
-      .search-row{ flex-direction:row; }
-    }
-    .search-box{
-      position:relative;
-      flex:1;
-    }
+    @media (min-width:600px){ .search-row{ flex-direction:row; } }
+    .search-box{ position:relative; flex:1; }
     .search-box svg{
-      position:absolute;
-      left:14px;
-      top:50%;
-      transform:translateY(-50%);
-      width:17px;
-      height:17px;
-      color:var(--muted);
-      pointer-events:none;
+      position:absolute; left:14px; top:50%; transform:translateY(-50%);
+      width:17px; height:17px; color:var(--muted); pointer-events:none;
     }
-    .search-box input{
-      width:100%;
-      padding:11px 14px 11px 42px !important;
-      font-size:15px;
-    }
+    .search-box input{ width:100%; padding:11px 14px 11px 42px !important; font-size:15px; }
     .store-input{
       background:rgba(7,20,38,.88);
       border:1px solid rgba(148,163,184,.22);
@@ -117,45 +91,25 @@
       border-radius:14px;
       outline:none;
       font-family:inherit;
-      transition:border-color .2s ease, box-shadow .2s ease;
     }
-    .store-input:focus{
-      border-color:var(--cyan);
-      box-shadow:0 0 0 3px rgba(34,211,238,.18);
-    }
+    .store-input:focus{ border-color:var(--cyan); box-shadow:0 0 0 3px rgba(34,211,238,.18); }
     .store-input option{background:#071827;color:var(--text)}
 
-    /* Trust Grid */
-    .trust-cards{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:12px;
-    }
-    .trust-card{
-      padding:14px 15px;
-      border-radius:18px;
-    }
+    .trust-cards{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .trust-card{ padding:14px 15px; border-radius:18px; }
 
-    /* Header Phone Pill */
     .header-phone{ display:none; }
     @media (min-width:768px){
       .header-phone{
-        display:inline-flex;
-        align-items:center;
-        gap:6px;
-        padding:8px 14px;
-        border-radius:12px;
-        background:rgba(34,211,238,.12);
-        border:1px solid rgba(34,211,238,.28);
-        color:var(--cyan);
-        font-size:14px;
-        font-weight:700;
+        display:inline-flex; align-items:center; gap:6px;
+        padding:8px 14px; border-radius:12px;
+        background:rgba(34,211,238,.12); border:1px solid rgba(34,211,238,.28);
+        color:var(--cyan); font-size:14px; font-weight:700;
       }
-      .header-phone:hover{ background:rgba(34,211,238,.2); }
     }
 
     /* Category Scroll */
-    .cat-scroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+    .cat-scroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
     .cat-scroll::-webkit-scrollbar{display:none}
     .cat-btn{
       flex-shrink:0;padding:8px 15px;border-radius:999px;font-size:14px;font-weight:700;
@@ -181,14 +135,9 @@
       grid-template-columns:repeat(2,1fr);
       gap:12px;
     }
-    @media (min-width:768px){
-      .products-grid{ grid-template-columns:repeat(3,1fr); gap:18px; }
-    }
-    @media (min-width:1024px){
-      .products-grid{ grid-template-columns:repeat(4,1fr); gap:20px; }
-    }
+    @media (min-width:768px){ .products-grid{ grid-template-columns:repeat(3,1fr); gap:18px; } }
+    @media (min-width:1024px){ .products-grid{ grid-template-columns:repeat(4,1fr); gap:20px; } }
 
-    /* Product Card */
     .prod-card{
       border-radius:22px;overflow:hidden;display:flex;flex-direction:column;
       transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
@@ -200,15 +149,10 @@
     }
     .prod-thumb{
       position:relative;aspect-ratio:1/1;
-      background:
-        radial-gradient(circle at 50% 45%,rgba(34,211,238,.12),transparent 42%),
-        linear-gradient(145deg,#071827,#0b233b);
+      background:radial-gradient(circle at 50% 45%,rgba(34,211,238,.12),transparent 42%),linear-gradient(145deg,#071827,#0b233b);
       overflow:hidden;display:block;
     }
-    .prod-thumb img{
-      width:100%;height:100%;object-fit:contain;padding:14px;
-      transition:transform .3s ease;
-    }
+    .prod-thumb img{ width:100%;height:100%;object-fit:contain;padding:14px;transition:transform .3s ease; }
     .prod-card:hover .prod-thumb img{transform:scale(1.06)}
 
     .spec-pill{
@@ -217,26 +161,26 @@
       color:#cbd5e1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;
     }
 
+    .card-btn-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:6px;
+    }
     .order-btn{
       background:linear-gradient(135deg,#10b981,#22c55e);color:#03130c;
-      font-weight:800;border:none;font-family:inherit;
-      transition:filter .15s ease,transform .15s ease;cursor:pointer;
+      font-weight:800;border:none;font-family:inherit;border-radius:12px;
+      padding:8px 6px;font-size:12.5px;text-align:center;cursor:pointer;
     }
     .order-btn:hover{filter:brightness(1.08)}
-    .wa-btn{background:#128c4a;color:#fff;font-weight:700;transition:filter .15s ease}
+    .wa-btn{
+      background:#128c4a;color:#fff;font-weight:700;border-radius:12px;
+      padding:8px 6px;font-size:12.5px;display:inline-flex;align-items:center;justify-content:center;gap:4px;
+    }
     .wa-btn:hover{filter:brightness(1.1)}
 
-    /* Buying Guide Grid */
-    .guide-grid{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:12px;
-    }
-    @media (min-width:768px){
-      .guide-grid{ grid-template-columns:repeat(3,1fr); gap:16px; }
-    }
+    .guide-grid{ display:grid; grid-template-columns:1fr; gap:12px; }
+    @media (min-width:768px){ .guide-grid{ grid-template-columns:repeat(3,1fr); gap:16px; } }
 
-    /* Mobile bottom quick bar */
     .mobile-bar{display:none}
     @media (max-width:639px){
       body{padding-bottom:76px}
@@ -250,8 +194,7 @@
       .mobile-bar a,.mobile-bar button{
         display:flex;align-items:center;justify-content:center;gap:6px;
         padding:10px 6px;border-radius:12px;font-size:13.5px;font-weight:700;
-        color:var(--text);border:1px solid var(--border);background:var(--panel);
-        font-family:inherit;
+        color:var(--text);border:1px solid var(--border);background:var(--panel);font-family:inherit;
       }
       .mobile-bar .primary{
         background:linear-gradient(135deg,var(--cyan),var(--violet));
@@ -263,12 +206,10 @@
 
 <body>
 
-  <!-- Top Offer Strip -->
   <div class="text-center text-xs sm:text-sm py-1.5 px-3 font-semibold border-b border-cyan-400/15 bg-gradient-to-r from-cyan-500/15 via-violet-500/15 to-cyan-500/15 text-slate-200">
     🚚 ঝাউদিয়া ও কুষ্টিয়া সদরে ক্যাশ অন ডেলিভারি এবং ফ্রি রাউটার কনফিগারেশন সুবিধা!
   </div>
 
-  <!-- Header -->
   <header class="sticky top-0 z-50 border-b border-cyan-400/10 bg-[#030914]/85 backdrop-blur-xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3">
       <div class="flex items-center justify-between gap-3">
@@ -284,16 +225,12 @@
         </a>
 
         <div class="flex items-center gap-2 flex-shrink-0">
-          <a href="index.html" class="px-3 py-2 rounded-xl glass text-xs sm:text-sm font-bold hover:border-cyan-400/40 hover:text-cyan-300 transition">
-            ← হোম
-          </a>
+          <a href="index.html" class="px-3 py-2 rounded-xl glass text-xs sm:text-sm font-bold hover:border-cyan-400/40 hover:text-cyan-300 transition">← হোম</a>
           <button type="button" data-cart-open aria-label="কার্ট খুলুন" class="px-3 py-2 rounded-xl glass text-xs sm:text-sm font-bold hover:border-cyan-400/40 transition inline-flex items-center gap-1.5 cursor-pointer">
             <span>🛒</span><span class="hidden sm:inline">কার্ট</span>
             <span data-cart-count class="rjc-badge" style="display:none">0</span>
           </button>
-          <a href="tel:09639019016" class="header-phone">
-            📞 09639-019016
-          </a>
+          <a href="tel:09639019016" class="header-phone">📞 09639-019016</a>
         </div>
       </div>
     </div>
@@ -301,7 +238,6 @@
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
 
-    <!-- Compact Hero Banner -->
     <section class="glass-strong rounded-3xl p-5 sm:p-8 mb-7">
       <div class="hero-layout">
         <div>
@@ -315,7 +251,6 @@
             Ruijie, Cudy, Tenda রাউটার থেকে শুরু করে VSOL/C-Data XPON ONU এবং লোডশেডিং ব্যাকআপের জন্য WGP Mini UPS — সবকিছু পাচ্ছেন সাশ্রয়ী দামে।
           </p>
 
-          <!-- Search & Sort Controls -->
           <div class="search-row">
             <div class="search-box">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
@@ -331,7 +266,6 @@
           </div>
         </div>
 
-        <!-- Trust Badges -->
         <div class="trust-cards">
           <div class="glass trust-card">
             <div class="text-xl mb-1">🛠️</div>
@@ -357,33 +291,28 @@
       </div>
     </section>
 
-    <!-- Category Filter Bar -->
     <section aria-label="ক্যাটাগরি ফিল্টার" class="mb-5">
       <div class="cat-scroll" id="categoryBar"></div>
     </section>
 
-    <!-- Active Filter Info -->
     <div class="flex items-center justify-between mb-4 px-1 text-xs sm:text-sm text-slate-400">
-      <div id="resultSummary">সব পণ্য দেখানো হচ্ছে</div>
+      <div id="resultSummary">লোড হচ্ছে...</div>
       <button type="button" id="resetFilterBtn" class="hidden text-cyan-300 font-bold hover:underline cursor-pointer bg-transparent border-0">ফিল্টার রিসেট করুন</button>
     </div>
 
-    <!-- Products Grid -->
     <section aria-label="প্রোডাক্ট তালিকা">
       <div id="productsGrid" class="products-grid"></div>
 
-      <!-- Empty Search State -->
       <div id="emptyState" class="hidden glass rounded-3xl p-10 sm:p-14 text-center">
         <div class="text-5xl mb-3">🔍</div>
-        <h2 class="text-xl font-black">কোনো পণ্য পাওয়া যায়নি</h2>
-        <p class="text-slate-400 text-sm mt-1">অন্য মডেল বা নাম লিখে খুঁজুন, অথবা সব পণ্য দেখুন।</p>
+        <h2 id="emptyTitle" class="text-xl font-black">কোনো পণ্য পাওয়া যায়নি</h2>
+        <p id="emptyDesc" class="text-slate-400 text-sm mt-1">অন্য মডেল বা নাম লিখে খুঁজুন, অথবা সব পণ্য দেখুন।</p>
         <button type="button" onclick="resetAllFilters()" class="mt-5 px-5 py-2.5 rounded-xl bg-cyan-400 text-slate-950 font-black text-sm cursor-pointer border-0">
           সব পণ্য দেখুন
         </button>
       </div>
     </section>
 
-    <!-- Smart Router Buying Guide -->
     <section class="glass-strong rounded-3xl p-5 sm:p-7 mt-12">
       <h2 class="font-display font-bold text-xl sm:text-2xl m-0">🤔 কোন ডিভাইসটি আপনার জন্য সেরা?</h2>
       <p class="text-slate-400 text-sm mt-1 mb-4">আপনার ইন্টারনেট প্যাকেজ ও বাসার প্রয়োজন অনুযায়ী বেছে নিন:</p>
@@ -411,7 +340,6 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="border-t border-cyan-400/10 mt-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 text-center text-sm text-slate-400">
       <div class="font-display font-extrabold text-slate-100 text-lg">RJ NETWORK | Store</div>
@@ -429,7 +357,6 @@
     </div>
   </footer>
 
-  <!-- Mobile Bottom Quick Bar -->
   <div class="mobile-bar">
     <a href="tel:09639019016">📞 কল</a>
     <a href="https://wa.me/8801714019016?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20RJ%20NETWORK%20Store%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%A1%E0%A6%BE%E0%A6%95%E0%A7%8D%E0%A6%9F%20%E0%A6%95%E0%A6%BF%E0%A6%A8%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" rel="noopener">💬 WhatsApp</a>
@@ -437,170 +364,175 @@
   </div>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){
+      document.getElementById('year').textContent = new Date().getFullYear();
 
-    const ALL_PRODUCTS = Array.isArray(PRODUCTS) ? PRODUCTS : [];
-    const grid = document.getElementById('productsGrid');
-    const emptyState = document.getElementById('emptyState');
-    const categoryBar = document.getElementById('categoryBar');
-    const searchInput = document.getElementById('searchInput');
-    const sortSelect = document.getElementById('sortSelect');
-    const resultSummary = document.getElementById('resultSummary');
-    const resetFilterBtn = document.getElementById('resetFilterBtn');
-
-    let selectedCategory = 'all';
-
-    function taka(n){ return '৳ ' + Number(n).toLocaleString('en-BD'); }
-    function esc(str){ return String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-
-    const CATEGORIES = [
-      { id: 'all', label: 'সব পণ্য', icon: '🛍️' },
-      { id: 'router', label: 'রাউটার', icon: '📡' },
-      { id: 'onu', label: 'ONU', icon: '🔌' },
-      { id: 'adapter', label: 'UPS ও Adapter', icon: '🔋' },
-      { id: 'lan', label: 'Cable', icon: '🔗' },
-      { id: 'rj45', label: 'Connector', icon: '🧩' },
-      { id: 'accessories', label: 'Accessories', icon: '🛠️' }
-    ];
-
-    function renderCategories(){
-      categoryBar.innerHTML = CATEGORIES.map(cat => {
-        const count = cat.id === 'all'
-          ? ALL_PRODUCTS.length
-          : ALL_PRODUCTS.filter(p => p.category === cat.id).length;
-        if(cat.id !== 'all' && count === 0) return '';
-        const isActive = selectedCategory === cat.id;
-        return `
-          <button type="button" class="cat-btn ${isActive ? 'active' : ''}" onclick="setCategory('${cat.id}')">
-            <span>${cat.icon}</span>
-            <span>${cat.label}</span>
-            <span class="count">${count}</span>
-          </button>
-        `;
-      }).join('');
-    }
-
-    window.setCategory = function(catId){
-      selectedCategory = catId;
-      renderCategories();
-      renderProducts();
-    };
-
-    window.resetAllFilters = function(){
-      selectedCategory = 'all';
-      searchInput.value = '';
-      sortSelect.value = 'default';
-      renderCategories();
-      renderProducts();
-    };
-
-    resetFilterBtn.addEventListener('click', window.resetAllFilters);
-    searchInput.addEventListener('input', renderProducts);
-    sortSelect.addEventListener('change', renderProducts);
-
-    function renderProducts(){
-      const query = searchInput.value.trim().toLowerCase();
-      const sortVal = sortSelect.value;
-
-      let list = ALL_PRODUCTS.filter(p => {
-        const matchCat = selectedCategory === 'all' || p.category === selectedCategory;
-        if(!matchCat) return false;
-        if(!query) return true;
-        const inName = (p.name || '').toLowerCase().includes(query);
-        const inCat = (p.categoryName || '').toLowerCase().includes(query);
-        const inDesc = (p.description || '').toLowerCase().includes(query);
-        const inSpecs = Array.isArray(p.specs) && p.specs.some(s => s.toLowerCase().includes(query));
-        return inName || inCat || inDesc || inSpecs;
-      });
-
-      if(sortVal === 'price-asc'){
-        list = [...list].sort((a, b) => a.price - b.price);
-      } else if(sortVal === 'price-desc'){
-        list = [...list].sort((a, b) => b.price - a.price);
+      function getProductsList(){
+        try {
+          if (typeof PRODUCTS !== 'undefined' && Array.isArray(PRODUCTS)) return PRODUCTS;
+        } catch(e){}
+        if (Array.isArray(window.PRODUCTS)) return window.PRODUCTS;
+        return [];
       }
 
-      const isFiltered = selectedCategory !== 'all' || query !== '' || sortVal !== 'default';
-      resetFilterBtn.classList.toggle('hidden', !isFiltered);
-      resultSummary.textContent = `মোট ${list.length} টি পণ্য দেখানো হচ্ছে`;
+      const grid = document.getElementById('productsGrid');
+      const emptyState = document.getElementById('emptyState');
+      const categoryBar = document.getElementById('categoryBar');
+      const searchInput = document.getElementById('searchInput');
+      const sortSelect = document.getElementById('sortSelect');
+      const resultSummary = document.getElementById('resultSummary');
+      const resetFilterBtn = document.getElementById('resetFilterBtn');
 
-      if(!list.length){
-        grid.innerHTML = '';
-        emptyState.classList.remove('hidden');
-        return;
+      let selectedCategory = 'all';
+
+      function taka(n){ return '৳ ' + Number(n || 0).toLocaleString('en-BD'); }
+      function esc(str){ return String(str == null ? '' : str).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+
+      const CATEGORIES = [
+        { id: 'all', label: 'সব পণ্য', icon: '🛍️' },
+        { id: 'router', label: 'রাউটার', icon: '📡' },
+        { id: 'onu', label: 'ONU', icon: '🔌' },
+        { id: 'adapter', label: 'UPS ও Adapter', icon: '🔋' },
+        { id: 'lan', label: 'Cable', icon: '🔗' },
+        { id: 'rj45', label: 'Connector', icon: '🧩' },
+        { id: 'accessories', label: 'Accessories', icon: '🛠️' }
+      ];
+
+      function renderCategories(){
+        const ALL_PRODUCTS = getProductsList();
+        categoryBar.innerHTML = CATEGORIES.map(function(cat){
+          const count = cat.id === 'all'
+            ? ALL_PRODUCTS.length
+            : ALL_PRODUCTS.filter(function(p){ return p.category === cat.id; }).length;
+          if(cat.id !== 'all' && count === 0) return '';
+          const isActive = selectedCategory === cat.id;
+          return '<button type="button" class="cat-btn ' + (isActive ? 'active' : '') + '" onclick="setCategory(\'' + cat.id + '\')">' +
+                 '<span>' + cat.icon + '</span><span>' + cat.label + '</span><span class="count">' + count + '</span></button>';
+        }).join('');
       }
-      emptyState.classList.add('hidden');
 
-      grid.innerHTML = list.map(p => {
-        const imgSrc = (p.images && p.images[0]) ? p.images[0] : 'logo.png';
-        const detailUrl = `product.html?id=${encodeURIComponent(p.id)}`;
-        const topSpecs = Array.isArray(p.specs) ? p.specs.slice(0, 2) : [];
-        const waText = encodeURIComponent(
-          `আসসালামু আলাইকুম RJ NETWORK, আমি এই পণ্যটি অর্ডার করতে চাই:\n📦 ${p.name}\n💰 মূল্য: ${taka(p.price)}\n🔗 ${location.origin}/${detailUrl}`
-        );
+      window.setCategory = function(catId){
+        selectedCategory = catId;
+        renderCategories();
+        renderProducts();
+      };
 
-        return `
-          <article class="prod-card glass">
-            <a href="${detailUrl}" class="prod-thumb" aria-label="${esc(p.name)}">
-              ${p.badge ? `<span class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-lg text-[10.5px] font-black ${p.badge.includes('HOT') ? 'bg-gradient-to-r from-amber-400 to-rose-500 text-slate-950' : 'bg-cyan-400 text-slate-950'}">${esc(p.badge)}</span>` : ''}
-              <span class="absolute top-2.5 right-2.5 z-10 px-2 py-0.5 rounded-lg text-[10.5px] font-bold bg-[#030914]/80 border border-white/10 text-cyan-300">
-                ${esc(p.categoryName || '')}
-              </span>
-              <img src="${esc(imgSrc)}" alt="${esc(p.name)}" width="400" height="400" loading="lazy" onerror="this.src='logo.png'">
-            </a>
+      window.resetAllFilters = function(){
+        selectedCategory = 'all';
+        searchInput.value = '';
+        sortSelect.value = 'default';
+        renderCategories();
+        renderProducts();
+      };
 
-            <div class="p-3 sm:p-4 flex-1 flex flex-col justify-between">
-              <div>
-                <a href="${detailUrl}" class="hover:text-cyan-300 transition">
-                  <h3 class="font-bold text-sm sm:text-[15.5px] leading-snug line-clamp-2 m-0">${esc(p.name)}</h3>
-                </a>
+      resetFilterBtn.addEventListener('click', window.resetAllFilters);
+      searchInput.addEventListener('input', renderProducts);
+      sortSelect.addEventListener('change', renderProducts);
 
-                ${topSpecs.length ? `
-                  <div class="flex flex-wrap gap-1 mt-2">
-                    ${topSpecs.map(s => `<span class="spec-pill">${esc(s)}</span>`).join('')}
-                  </div>
-                ` : ''}
-              </div>
+      function renderProducts(){
+        const ALL_PRODUCTS = getProductsList();
+        const query = searchInput.value.trim().toLowerCase();
+        const sortVal = sortSelect.value;
 
-              <div class="mt-3 pt-2.5 border-t border-white/10">
-                <div class="flex items-center justify-between gap-1 mb-2.5">
-                  <div>
-                    <span class="text-lg sm:text-xl font-black text-cyan-300">${taka(p.price)}</span>
-                    ${p.unit ? `<span class="text-[11px] text-slate-400"> / ${esc(p.unit)}</span>` : ''}
-                  </div>
-                  <span class="text-[11px] font-bold ${p.stock ? 'text-emerald-400' : 'text-rose-400'}">
-                    ${p.stock ? '● ইন স্টক' : '● স্টক শেষ'}
-                  </span>
-                </div>
+        if(ALL_PRODUCTS.length === 0){
+          resultSummary.textContent = '⚠️ products.js লোড হয়নি';
+          document.getElementById('emptyTitle').textContent = 'products.js ফাইলটি খুঁজে পাওয়া যায়নি';
+          document.getElementById('emptyDesc').textContent = 'নিশ্চিত করুন store.html এবং products.js একই ফোল্ডারে আছে এবং ব্রাউজার হার্ড রিফ্রেশ (Ctrl + Shift + R) দিন।';
+          emptyState.classList.remove('hidden');
+          return;
+        }
 
-                <!-- cart.js এর Add to Cart হুক -->
-                <div data-cart-actions="${esc(p.id)}" data-size="sm" class="mb-2"></div>
+        let list = ALL_PRODUCTS.filter(function(p){
+          const matchCat = selectedCategory === 'all' || p.category === selectedCategory;
+          if(!matchCat) return false;
+          if(!query) return true;
+          const inName = (p.name || '').toLowerCase().includes(query);
+          const inCat = (p.categoryName || '').toLowerCase().includes(query);
+          const inDesc = (p.description || '').toLowerCase().includes(query);
+          const inSpecs = Array.isArray(p.specs) && p.specs.some(function(s){ return String(s).toLowerCase().includes(query); });
+          return inName || inCat || inDesc || inSpecs;
+        });
 
-                <!-- Direct Buy Now + WhatsApp -->
-                <div class="grid grid-cols-2 gap-1.5">
-                  <button type="button" onclick="window.Cart && Cart.buyNow('${esc(p.id)}')" ${!p.stock ? 'disabled' : ''}
-                    class="order-btn rounded-xl py-2 px-2 text-xs text-center ${!p.stock ? 'opacity-50 cursor-not-allowed' : ''}">
-                    অর্ডার করুন
-                  </button>
-                  <a href="https://wa.me/8801714019016?text=${waText}" target="_blank" rel="noopener"
-                    class="wa-btn rounded-xl py-2 px-2 text-xs text-center inline-flex items-center justify-center gap-1">
-                    💬 WhatsApp
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-        `;
-      }).join('');
+        if(sortVal === 'price-asc'){
+          list = list.slice().sort(function(a, b){ return a.price - b.price; });
+        } else if(sortVal === 'price-desc'){
+          list = list.slice().sort(function(a, b){ return b.price - a.price; });
+        }
 
-      if(window.Cart && typeof Cart.refresh === 'function') Cart.refresh();
-      else if(window.Cart && typeof Cart.init === 'function') Cart.init();
-    }
+        const isFiltered = selectedCategory !== 'all' || query !== '' || sortVal !== 'default';
+        resetFilterBtn.classList.toggle('hidden', !isFiltered);
+        resultSummary.textContent = 'মোট ' + list.length + ' টি পণ্য দেখানো হচ্ছে';
 
-    const urlCat = new URLSearchParams(location.search).get('cat');
-    if(urlCat && CATEGORIES.some(c => c.id === urlCat)) selectedCategory = urlCat;
+        if(!list.length){
+          grid.innerHTML = '';
+          document.getElementById('emptyTitle').textContent = 'কোনো পণ্য পাওয়া যায়নি';
+          document.getElementById('emptyDesc').textContent = 'অন্য মডেল বা নাম লিখে খুঁজুন, অথবা সব পণ্য দেখুন।';
+          emptyState.classList.remove('hidden');
+          return;
+        }
+        emptyState.classList.add('hidden');
 
-    renderCategories();
-    renderProducts();
+        grid.innerHTML = list.map(function(p){
+          const imgSrc = (p.images && p.images[0]) ? p.images[0] : 'logo.png';
+          const detailUrl = 'product.html?id=' + encodeURIComponent(p.id);
+          const topSpecs = Array.isArray(p.specs) ? p.specs.slice(0, 2) : [];
+          const waText = encodeURIComponent(
+            'আসসালামু আলাইকুম RJ NETWORK, আমি এই পণ্যটি অর্ডার করতে চাই:\n📦 ' + p.name + '\n💰 মূল্য: ' + taka(p.price) + '\n🔗 ' + location.origin + '/' + detailUrl
+          );
+          const badgeClass = p.badge && p.badge.indexOf('HOT') !== -1
+            ? 'bg-gradient-to-r from-amber-400 to-rose-500 text-slate-950'
+            : 'bg-cyan-400 text-slate-950';
+
+          return (
+            '<article class="prod-card glass">' +
+              '<a href="' + detailUrl + '" class="prod-thumb" aria-label="' + esc(p.name) + '">' +
+                (p.badge ? '<span class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-lg text-[10.5px] font-black ' + badgeClass + '">' + esc(p.badge) + '</span>' : '') +
+                '<span class="absolute top-2.5 right-2.5 z-10 px-2 py-0.5 rounded-lg text-[10.5px] font-bold bg-[#030914]/80 border border-white/10 text-cyan-300">' + esc(p.categoryName || '') + '</span>' +
+                '<img src="' + esc(imgSrc) + '" alt="' + esc(p.name) + '" width="400" height="400" loading="lazy" onerror="this.src=\'logo.png\'">' +
+              '</a>' +
+              '<div class="p-3 sm:p-4 flex-1 flex flex-col justify-between">' +
+                '<div>' +
+                  '<a href="' + detailUrl + '" class="hover:text-cyan-300 transition">' +
+                    '<h3 class="font-bold text-sm sm:text-[15.5px] leading-snug line-clamp-2 m-0">' + esc(p.name) + '</h3>' +
+                  '</a>' +
+                  (topSpecs.length ? '<div class="flex flex-wrap gap-1 mt-2">' + topSpecs.map(function(s){ return '<span class="spec-pill">' + esc(s) + '</span>'; }).join('') + '</div>' : '') +
+                '</div>' +
+                '<div class="mt-3 pt-2.5 border-t border-white/10">' +
+                  '<div class="flex items-center justify-between gap-1 mb-2.5">' +
+                    '<div>' +
+                      '<span class="text-lg sm:text-xl font-black text-cyan-300">' + taka(p.price) + '</span>' +
+                      (p.unit ? '<span class="text-[11px] text-slate-400"> / ' + esc(p.unit) + '</span>' : '') +
+                    '</div>' +
+                    '<span class="text-[11px] font-bold ' + (p.stock ? 'text-emerald-400' : 'text-rose-400') + '">' + (p.stock ? '● ইন স্টক' : '● স্টক শেষ') + '</span>' +
+                  '</div>' +
+                  '<div data-cart-actions="' + esc(p.id) + '" data-size="sm" class="mb-2"></div>' +
+                  '<div class="card-btn-row">' +
+                    '<button type="button" onclick="window.Cart && Cart.buyNow(\'' + esc(p.id) + '\')" ' + (!p.stock ? 'disabled' : '') + ' class="order-btn ' + (!p.stock ? 'opacity-50 cursor-not-allowed' : '') + '">অর্ডার করুন</button>' +
+                    '<a href="https://wa.me/8801714019016?text=' + waText + '" target="_blank" rel="noopener" class="wa-btn">💬 WhatsApp</a>' +
+                  '</div>' +
+                '</div>' +
+              '</div>' +
+            '</article>'
+          );
+        }).join('');
+
+        if(window.Cart && typeof Cart.refresh === 'function') Cart.refresh();
+        else if(window.Cart && typeof Cart.init === 'function') Cart.init();
+      }
+
+      function initStore(){
+        const urlCat = new URLSearchParams(location.search).get('cat');
+        if(urlCat && CATEGORIES.some(function(c){ return c.id === urlCat; })) selectedCategory = urlCat;
+        renderCategories();
+        renderProducts();
+      }
+
+      if(document.readyState === 'loading'){
+        document.addEventListener('DOMContentLoaded', initStore);
+      } else {
+        initStore();
+      }
+    })();
   </script>
 </body>
 </html>
