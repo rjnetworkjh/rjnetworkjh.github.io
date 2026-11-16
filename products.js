@@ -1,571 +1,503 @@
-const PRODUCTS = [
-  // =========================================================
-  // ROUTERS
-  // =========================================================
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>অনলাইন স্টোর | RJ NETWORK — রাউটার, ONU, মিনি UPS ও নেটওয়ার্কিং ডিভাইস</title>
+  <meta name="description" content="RJ NETWORK অনলাইন স্টোর — Ruijie, Cudy, Tenda, TP-Link রাউটার, VSOL/C-Data XPON ONU, WGP Mini UPS ও নেটওয়ার্কিং এক্সেসরিজ। ঝাউদিয়া ও কুষ্টিয়া সদরে ক্যাশ অন ডেলিভারি।">
+  <meta name="theme-color" content="#030914">
+  <link rel="canonical" href="https://rjnetworkjh.github.io/store.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="bn_BD">
+  <meta property="og:site_name" content="RJ NETWORK">
+  <meta property="og:title" content="RJ NETWORK | Store — রাউটার, ONU ও মিনি UPS">
+  <meta property="og:description" content="অরিজিনাল রাউটার, ONU, মিনি UPS ও ক্যাবল কিনুন ক্যাশ অন ডেলিভারিতে। ঝাউদিয়া, কুষ্টিয়া সদর।">
+  <meta property="og:url" content="https://rjnetworkjh.github.io/store.html">
+  <meta property="og:image" content="https://rjnetworkjh.github.io/logo.png">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Baloo+Da+2:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-  {
-    id: "router-1",
-    name: "Ruijie RG-EW1200 1200M Dual Band WiFi Router",
-    category: "router",
-    categoryName: "রাউটার",
-    price: 3050,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "দ্রুতগতির Dual Band WiFi Router। বাসা ও ছোট অফিসের জন্য উপযোগী।",
-    specs: [
-      "Model: RG-EW1200",
-      "Frequency: 2.4 GHz, 5 GHz",
-      "4 Antenna",
-      "Port: 1x WAN, 1x LAN"
-    ],
-    images: [
-      "products/router-1/1.jpeg",
-      "products/router-1/2.jpeg",
-      "products/router-1/3.jpeg"
-    ]
-  },
+  <!-- তোমার বিদ্যমান প্রোডাক্ট ও কার্ট স্ক্রিপ্ট -->
+  <script src="products.js"></script>
+  <script src="cart.js" defer></script>
 
-  {
-    id: "router-2",
-    name: "Ruijie RG-EW300N 300 Mbps Wi-Fi 4 Wireless Smart Router",
-    category: "router",
-    categoryName: "রাউটার",
-    price: 1800,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "300Mbps Wireless Router। বাসা ও ছোট অফিসের জন্য উপযোগী।",
-    specs: [
-      "Band: Single Band",
-      "Wi-Fi Coverage: Up to 1500 sq. ft.",
-      "Antenna: 2 x 5 dBi External Antenna",
-      "Color: Black"
-    ],
-    images: [
-      "products/router-2/1.jpeg",
-      "products/router-2/2.jpeg",
-      "products/router-2/3.jpeg"
-    ]
-  },
+  <style>
+    :root{
+      --bg:#030914;
+      --panel:rgba(8,22,40,.80);
+      --panel-strong:rgba(12,30,54,.88);
+      --border:rgba(148,163,184,.14);
+      --cyan:#22d3ee;
+      --blue:#38bdf8;
+      --violet:#8b5cf6;
+      --text:#f1f5f9;
+      --muted:#94a3b8;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 12% 6%,rgba(34,211,238,.12),transparent 30%),
+        radial-gradient(circle at 88% 15%,rgba(139,92,246,.14),transparent 32%),
+        var(--bg);
+      font-family:"Hind Siliguri",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans Bengali",sans-serif;
+      min-height:100vh;
+    }
+    .font-display{ font-family:"Baloo Da 2","Hind Siliguri",sans-serif; }
+    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
 
-  {
-    id: "router-3",
-    name: "Tenda AC3 AC750 Dual Band WiFi Router",
-    category: "router",
-    categoryName: "রাউটার",
-    price: 1750,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "AC750 Dual Band WiFi Router। 2.4GHz ও 5GHz উভয় ব্যান্ড সাপোর্ট করে।",
-    specs: [
-      "Model: Tenda AC3",
-      "Wireless Standard: 802.11ac",
-      "Speed: Up to 750 Mbps",
-      "Dual Band: 2.4GHz + 5GHz",
-      "Antenna: 4 x 6 dBi External Antenna",
-      "Port: 1 x WAN + 3 x LAN",
-      "Beamforming Technology",
-      "Parental Control"
-    ],
-    images: [
-      "products/router-3/1.jpeg",
-      "products/router-3/2.jpeg",
-      "products/router-3/3.jpeg"
-    ]
-  },
+    .glass{
+      background:var(--panel);
+      border:1px solid var(--border);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+    }
+    .glass-strong{
+      background:var(--panel-strong);
+      border:1px solid rgba(56,189,248,.18);
+      backdrop-filter:blur(22px);
+      -webkit-backdrop-filter:blur(22px);
+    }
 
-  {
-    id: "router-4",
-    name: "Tenda F6 300Mbps N300 4 Antenna WiFi Router",
-    category: "router",
-    categoryName: "রাউটার",
-    price: 1550,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "300Mbps N300 Wireless Router। চারটি External Antenna সহ ভালো WiFi Coverage-এর জন্য উপযোগী।",
-    specs: [
-      "Model: Tenda F6",
-      "Wireless Speed: Up to 300 Mbps",
-      "Wireless Standard: 802.11n",
-      "Frequency: 2.4 GHz",
-      "Antenna: 4 x 5 dBi External Antenna",
-      "Port: 1 x WAN + 3 x LAN",
-      "Access Point Mode",
-      "Repeater Mode"
-    ],
-    images: [
-      "products/router-4/1.jpeg",
-      "products/router-4/2.jpeg",
-      "products/router-4/3.jpeg"
-    ]
-  },
+    /* Category Scroll */
+    .cat-scroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+    .cat-scroll::-webkit-scrollbar{display:none}
+    .cat-btn{
+      flex-shrink:0;padding:8px 15px;border-radius:999px;font-size:14px;font-weight:700;
+      color:var(--muted);background:var(--panel);border:1px solid var(--border);
+      transition:all .18s ease;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
+    }
+    .cat-btn:hover{color:var(--text);border-color:rgba(34,211,238,.45)}
+    .cat-btn.active{
+      background:linear-gradient(135deg,var(--cyan),var(--violet));
+      color:#030914;border-color:transparent;
+      box-shadow:0 6px 18px rgba(34,211,238,.28);
+    }
+    .cat-btn .count{
+      font-size:11px;padding:1px 7px;border-radius:999px;
+      background:rgba(255,255,255,.1);color:inherit;
+    }
+    .cat-btn.active .count{background:rgba(3,9,20,.18);color:#030914}
 
-  {
-    id: "router-5",
-    name: "Tenda F3 300Mbps Wireless N Router",
-    category: "router",
-    categoryName: "রাউটার",
-    price: 1490,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "300Mbps Wireless N Router। বাসা, ছোট অফিস ও সাধারণ Internet ব্যবহারের জন্য উপযোগী।",
-    specs: [
-      "Model: Tenda F3",
-      "Wireless Speed: Up to 300 Mbps",
-      "Wireless Standard: 802.11n",
-      "Frequency: 2.4 GHz",
-      "Antenna: 3 x 5 dBi External Antenna",
-      "Port: 1 x WAN + 3 x LAN",
-      "WISP Mode",
-      "Repeater Mode"
-    ],
-    images: [
-      "products/router-5/1.jpeg",
-      "products/router-5/2.jpeg",
-      "products/router-5/3.jpeg"
-    ]
-  },
+    /* Product Card */
+    .prod-card{
+      border-radius:22px;overflow:hidden;display:flex;flex-direction:column;
+      transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+    }
+    .prod-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(34,211,238,.48);
+      box-shadow:0 14px 32px rgba(0,0,0,.45);
+    }
+    .prod-thumb{
+      position:relative;aspect-ratio:1/1;
+      background:
+        radial-gradient(circle at 50% 45%,rgba(34,211,238,.12),transparent 42%),
+        linear-gradient(145deg,#071827,#0b233b);
+      overflow:hidden;display:block;
+    }
+    .prod-thumb img{
+      width:100%;height:100%;object-fit:contain;padding:14px;
+      transition:transform .3s ease;
+    }
+    .prod-card:hover .prod-thumb img{transform:scale(1.06)}
 
-  {
-    id: "router-6",
-    name: "Ruijie RG-EW1300G 1300Mbps Dual Band Mesh Router",
-    category: "router",
-    categoryName: "রাউটার",
-    price: 3650,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "High-speed AC1300 Dual Band Mesh Router। বড় Coverage Area ও স্মার্ট WiFi ব্যবহারের জন্য উপযোগী।",
-    specs: [
-      "Model: RG-EW1300G",
-      "Wireless Speed: Up to 1300 Mbps",
-      "Dual Band: 2.4GHz + 5GHz",
-      "Mesh Support",
-      "MU-MIMO Technology",
-      "Gigabit Ethernet Ports",
-      "Smart WiFi Management"
-    ],
-    images: [
-      "products/router-6/1.jpeg",
-      "products/router-6/2.jpeg",
-      "products/router-6/3.jpeg"
-    ]
-  },
+    .spec-pill{
+      font-size:11px;padding:2px 8px;border-radius:6px;
+      background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+      color:#cbd5e1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;
+    }
 
-  {
-    id: "router-7",
-    name: "Cudy WR1200 AC1200 Dual Band WiFi Router",
-    category: "router",
-    categoryName: "রাউটার",
-    price: 2440,
-    unit: "পিস",
-    stock: true,
-    badge: "HOT 🔥",
-    description:
-      "AC1200 Dual Band Gigabit WiFi Router। High-speed Internet ও home networking-এর জন্য উপযোগী।",
-    specs: [
-      "Model: Cudy WR1200",
-      "Wireless Speed: Up to 1200 Mbps",
-      "Dual Band: 2.4GHz + 5GHz",
-      "2.4GHz: Up to 300 Mbps",
-      "5GHz: Up to 867 Mbps",
-      "Gigabit WAN/LAN Ports",
-      "MU-MIMO Technology",
-      "Multiple Operation Modes"
-    ],
-    images: [
-      "products/router-7/1.jpeg",
-      "products/router-7/2.jpeg",
-      "products/router-7/3.jpeg",
-      "products/router-7/4.jpeg"
-    ]
-  },
+    .order-btn{
+      background:linear-gradient(135deg,#10b981,#22c55e);color:#03130c;
+      font-weight:800;transition:filter .15s ease,transform .15s ease;cursor:pointer;
+    }
+    .order-btn:hover{filter:brightness(1.08)}
+    .wa-btn{background:#128c4a;color:#fff;font-weight:700;transition:filter .15s ease}
+    .wa-btn:hover{filter:brightness(1.1)}
 
-  {
-    id: "router-8",
-    name: "Cudy WR1300 AC1200 Gigabit Dual Band Wi-Fi Router",
-    category: "router",
-    categoryName: "রাউটার",
-    price: 3000,
-    unit: "পিস",
-    stock: true,
-    badge: "HOT 🔥",
-    description:
-      "AC1200 Dual Band Gigabit WiFi Router। High-speed Internet ও home networking-এর জন্য উপযোগী।",
-    specs: [
-      "Model: WR1300",
-      "5 x Gigabit Ethernet Ports",
-      "4 x 5dBi High Gain Antennas",
-      "2-IN-1 WiFi Router + Access Point",
-      "MIMO Technology Support",
-      "Frequency: 5 GHz + 2.4 GHz",
-      "Guest Network",
-      "Parental Control"
-    ],
-    images: [
-      "products/router-8/1.jpeg",
-      "products/router-8/2.jpeg",
-      "products/router-8/3.jpeg",
-      "products/router-8/4.jpeg"
-    ]
-  },
+    /* Inputs */
+    .store-input{
+      background:rgba(7,20,38,.85);border:1px solid rgba(148,163,184,.2);
+      color:var(--text);border-radius:14px;outline:none;transition:border-color .2s ease;
+    }
+    .store-input:focus{border-color:var(--cyan)}
+    .store-input option{background:#071827;color:var(--text)}
 
-  {
-    id: "router-9",
-    name: "Mercusys MW325R 300Mbps Enhanced Wireless N Router",
-    category: "router",
-    categoryName: "রাউটার",
-    price: 1220,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "300Mbps Enhanced Wireless N Router। চারটি High-Gain Antenna সহ বিস্তৃত WiFi Coverage-এর জন্য উপযোগী।",
-    specs: [
-      "Model: Mercusys MW325R",
-      "Wireless Speed: Up to 300 Mbps",
-      "Frequency: 2.4 GHz",
-      "Antenna: 4 x 5 dBi External Antenna",
-      "Port: 1 x WAN + 3 x LAN",
-      "MIMO Technology",
-      "Guest Network",
-      "Parental Control"
-    ],
-    images: [
-      "products/router-9/1.jpeg",
-      "products/router-9/2.jpeg",
-      "products/router-9/3.jpeg"
-    ]
-  },
+    /* Mobile bottom quick bar */
+    .mobile-bar{display:none}
+    @media (max-width:639px){
+      body{padding-bottom:76px}
+      .mobile-bar{
+        display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:8px;
+        position:fixed;left:0;right:0;bottom:0;z-index:40;
+        padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));
+        background:rgba(3,9,20,.95);backdrop-filter:blur(14px);
+        border-top:1px solid rgba(148,163,184,.16);
+      }
+      .mobile-bar a,.mobile-bar button{
+        display:flex;align-items:center;justify-content:center;gap:6px;
+        padding:10px 6px;border-radius:12px;font-size:13.5px;font-weight:700;
+        color:var(--text);border:1px solid var(--border);background:var(--panel);
+      }
+      .mobile-bar .primary{
+        background:linear-gradient(135deg,var(--cyan),var(--violet));
+        color:#030914;border-color:transparent;
+      }
+    }
+  </style>
+</head>
 
+<body>
 
-  // =========================================================
-  // ONU
-  // =========================================================
+  <!-- Top Offer Strip -->
+  <div class="text-center text-xs sm:text-sm py-1.5 px-3 font-semibold border-b border-cyan-400/15 bg-gradient-to-r from-cyan-500/15 via-violet-500/15 to-cyan-500/15 text-slate-200">
+    🚚 ঝাউদিয়া ও কুষ্টিয়া সদরে ক্যাশ অন ডেলিভারি এবং ফ্রি রাউটার কনফিগারেশন সুবিধা!
+  </div>
 
-  {
-    id: "onu-1",
-    name: "VSOL V2801RD Single Port XPON ONU",
-    category: "onu",
-    categoryName: "ONU",
-    price: 1500,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "FTTH Internet connection-এর জন্য XPON ONU। নির্ভরযোগ্য ও ব্যবহারবান্ধব।",
-    specs: [
-      "Model: V2801RD",
-      "1 XPON Port",
-      "EPON PX20+ and GPON Class B+",
-      "1 x GE RJ45 Ethernet Port",
-      "Auto-negotiation",
-      "Rogue ONU Detection",
-      "Hardware Dying Gasp",
-      "Transmission Distance: Up to 20KM"
-    ],
-    images: [
-      "products/onu-1/1.jpeg"
-    ]
-  },
+  <!-- Header (product.html এর সাথে সামঞ্জস্যপূর্ণ) -->
+  <header class="sticky top-0 z-50 border-b border-cyan-400/10 bg-[#030914]/85 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3">
+      <div class="flex items-center justify-between gap-3">
+        <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+          <img src="logo.png" alt="RJ NETWORK লোগো" width="52" height="52" class="w-11 h-11 sm:w-13 sm:h-13 object-contain flex-shrink-0 rounded-xl">
+          <div class="min-w-0">
+            <div class="font-display font-extrabold tracking-wide text-lg sm:text-xl truncate flex items-center gap-2">
+              <span>RJ NETWORK</span>
+              <span class="px-2 py-0.5 rounded-full text-[11px] font-black bg-cyan-400/15 text-cyan-300 border border-cyan-400/30">STORE</span>
+            </div>
+            <div class="text-[11px] sm:text-xs text-slate-400 truncate">কানেক্ট থাকুন সেরা ডিভাইসে • ঝাউদিয়া, কুষ্টিয়া</div>
+          </div>
+        </a>
 
-  {
-    id: "onu-2",
-    name: "DBC 1 Port XPON ONU",
-    category: "onu",
-    categoryName: "ONU",
-    price: 650,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "Single Port XPON ONU। FTTH Broadband Internet connection-এর জন্য উপযোগী।",
-    specs: [
-      "Brand: DBC",
-      "1 Port XPON ONU",
-      "EPON / GPON Support",
-      "1 x Ethernet Port",
-      "FTTH Compatible",
-      "Compact Design"
-    ],
-    images: [
-      "products/onu-2/1.jpeg"
-    ]
-  },
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <a href="index.html" class="px-3 py-2 rounded-xl glass text-xs sm:text-sm font-bold hover:border-cyan-400/40 hover:text-cyan-300 transition">
+            ← হোম
+          </a>
+          <button type="button" data-cart-open aria-label="কার্ট খুলুন" class="px-3 py-2 rounded-xl glass text-xs sm:text-sm font-bold hover:border-cyan-400/40 transition inline-flex items-center gap-1.5 cursor-pointer">
+            <span>🛒</span><span class="hidden sm:inline">কার্ট</span>
+            <span data-cart-count class="rjc-badge" style="display:none">0</span>
+          </button>
+          <a href="tel:09639019016" class="hidden md:inline-flex px-3.5 py-2 rounded-xl bg-cyan-400/15 border border-cyan-400/25 text-cyan-300 text-sm font-bold hover:bg-cyan-400/20 transition">
+            📞 09639-019016
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  {
-    id: "onu-3",
-    name: "VSOL V2801RGW XPON WiFi ONU Router",
-    category: "onu",
-    categoryName: "ONU",
-    price: 1900,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "XPON WiFi ONU Router। একই ডিভাইসে Optical ONU ও WiFi Router সুবিধা।",
-    specs: [
-      "Model: V2801RGW",
-      "XPON: EPON + GPON",
-      "WiFi: 2.4 GHz",
-      "Wireless N",
-      "1 x GE LAN Port",
-      "Built-in WiFi Router",
-      "FTTH Compatible",
-      "Suitable for Home Broadband"
-    ],
-    images: [
-      "products/onu-3/1.jpeg",
-      "products/onu-3/2.jpeg",
-      "products/onu-3/3.jpeg"
-    ]
-  },
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
 
-  {
-    id: "onu-4",
-    name: "C-Data FD511G-X-F361 Single Port XPON ONU",
-    category: "onu",
-    categoryName: "ONU",
-    price: 1399,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "C-Data Single Port XPON ONU। GPON ও EPON FTTH network-এর জন্য উপযোগী।",
-    specs: [
-      "Model: FD511G-X-F361",
-      "Single Port XPON ONU",
-      "GPON / EPON Support",
-      "1 x Gigabit Ethernet Port",
-      "Auto Detection",
-      "FTTH Application",
-      "Compact Design"
-    ],
-    images: [
-      "products/onu-4/1.jpeg"
-    ]
-  },
+    <!-- Compact Hero Banner -->
+    <section class="glass-strong rounded-3xl p-5 sm:p-8 mb-7 relative overflow-hidden">
+      <div class="grid lg:grid-cols-12 gap-6 items-center">
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-300/25 text-cyan-300 text-xs font-bold mb-3">
+            ⚡ অরিজিনাল নেটওয়ার্কিং ডিভাইস • ক্যাশ অন ডেলিভারি
+          </div>
+          <h1 class="font-display font-extrabold text-2xl sm:text-4xl leading-tight">
+            হাই-স্পিড ওয়াই-ফাই রাউটার, ONU ও মিনি UPS স্টোর
+          </h1>
+          <p class="text-slate-300 text-sm sm:text-base mt-2.5 max-w-2xl leading-relaxed">
+            Ruijie, Cudy, Tenda রাউটার থেকে শুরু করে VSOL/C-Data XPON ONU এবং লোডশেডিং ব্যাকআপের জন্য WGP Mini UPS — সবকিছু পাচ্ছেন সাশ্রয়ী দামে।
+          </p>
 
-  {
-    id: "onu-5",
-    name: "DBC ONU Router 2 Antenna XPON",
-    category: "onu",
-    categoryName: "ONU",
-    price: 1360,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "XPON ONU Router with 2 Antenna। Optical Internet connection-এর সাথে built-in WiFi সুবিধা।",
-    specs: [
-      "Brand: DBC",
-      "XPON ONU Router",
-      "EPON / GPON Support",
-      "2 External Antenna",
-      "Built-in WiFi",
-      "Ethernet LAN Port",
-      "FTTH Compatible",
-      "Home Broadband Use"
-    ],
-    images: [
-      "products/onu-5/1.jpeg",
-      "products/onu-5/2.jpeg",
-      "products/onu-5/3.jpeg"
-    ]
-  },
+          <!-- Search & Sort Controls -->
+          <div class="mt-5 flex flex-col sm:flex-row gap-2.5 max-w-xl">
+            <div class="relative flex-1">
+              <input type="search" id="searchInput" class="store-input w-full py-2.5 pl-10 pr-4 text-sm sm:text-base" placeholder="রাউটার, ONU, মিনি UPS বা মডেল লিখুন...">
+              <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+              </svg>
+            </div>
+            <select id="sortSelect" aria-label="সাজান" class="store-input py-2.5 px-3.5 text-sm font-semibold cursor-pointer">
+              <option value="default">সাজান: ডিফল্ট</option>
+              <option value="price-asc">দাম: কম থেকে বেশি</option>
+              <option value="price-desc">দাম: বেশি থেকে কম</option>
+            </select>
+          </div>
+        </div>
 
+        <!-- Trust Badges -->
+        <div class="lg:col-span-5 grid grid-cols-2 gap-3">
+          <div class="glass rounded-2xl p-3.5">
+            <div class="text-xl mb-1">🛠️</div>
+            <div class="font-bold text-sm text-slate-100">ফ্রি সেটআপ সুবিধা</div>
+            <div class="text-xs text-slate-400 mt-0.5">আমাদের টেকনিশিয়ান কনফিগার করে দেবে</div>
+          </div>
+          <div class="glass rounded-2xl p-3.5">
+            <div class="text-xl mb-1">💵</div>
+            <div class="font-bold text-sm text-slate-100">ক্যাশ অন ডেলিভারি</div>
+            <div class="text-xs text-slate-400 mt-0.5">পণ্য হাতে পেয়ে টাকা পরিশোধ করুন</div>
+          </div>
+          <div class="glass rounded-2xl p-3.5">
+            <div class="text-xl mb-1">🔋</div>
+            <div class="font-bold text-sm text-slate-100">পাওয়ার ব্যাকআপ</div>
+            <div class="text-xs text-slate-400 mt-0.5">কারেন্ট গেলেও চলবে ওয়াই-ফাই</div>
+          </div>
+          <div class="glass rounded-2xl p-3.5">
+            <div class="text-xl mb-1">📍</div>
+            <div class="font-bold text-sm text-slate-100">স্থানীয় সাপোর্ট</div>
+            <div class="text-xs text-slate-400 mt-0.5">ঝাউদিয়া বলফিল্ড মোড় অফিস</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  // =========================================================
-  // CABLE
-  // =========================================================
+    <!-- Category Filter Bar -->
+    <section aria-label="ক্যাটাগরি ফিল্টার" class="mb-6">
+      <div class="cat-scroll" id="categoryBar"></div>
+    </section>
 
-  {
-    id: "cat6-1",
-    name: "UGREEN NW102 Cat-6 U/UTP 0.5 Meter Black Network Cable",
-    category: "lan",
-    categoryName: "Cable",
-    price: 150,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "High-speed Cat6 UTP LAN Cable। Internet ও networking-এর জন্য উপযোগী।",
-    specs: [
-      "Length: 0.5 Meter",
-      "Cable Type: Cat6",
-      "Shielding: U/UTP",
-      "Connector: RJ45",
-      "Color: Black"
-    ],
-    images: [
-      "products/cat6-1/1.jpeg",
-      "products/cat6-1/2.jpeg",
-      "products/cat6-1/3.jpeg"
-    ]
-  },
-  {
-    id: "fiber-patch-1",
-    name: "Fiber Patch Cord (SC/UPC)",
-    category: "lan",
-    categoryName: "Cable",
-    price: 180,
-    unit: "পিস",
-    // TODO: দামটি কোন দৈর্ঘ্যের তা নিশ্চিত করে note ঠিক করুন
-    note: "দৈর্ঘ্য (১m / ৩m / ৫m / ১০m) অনুযায়ী দাম ভিন্ন হতে পারে — অর্ডারের আগে কল করে নিশ্চিত হোন।",
-    stock: true,
-    badge: "NEW",
-    description:
-      "Single Mode Fiber Patch Cord। FTTH ও optical networking-এর জন্য উপযোগী।",
-    specs: [
-      "Fiber Type: Single Mode",
-      "Connector: SC/UPC",
-      "Low Loss",
-      "Available Length: 1m / 3m / 5m / 10m",
-      "FTTH Compatible"
-    ],
-    images: [
-      "products/fiber-patch-1/1.jpeg",
-      "products/fiber-patch-1/2.jpeg",
-      "products/fiber-patch-1/3.jpeg"
-    ]
-  },
+    <!-- Active Filter Info -->
+    <div class="flex items-center justify-between mb-4 px-1 text-xs sm:text-sm text-slate-400">
+      <div id="resultSummary">সব পণ্য দেখানো হচ্ছে</div>
+      <button type="button" id="resetFilterBtn" class="hidden text-cyan-300 font-bold hover:underline cursor-pointer">ফিল্টার রিসেট করুন</button>
+    </div>
 
-  // =========================================================
-  // CONNECTOR
-  // =========================================================
+    <!-- Products Grid -->
+    <section aria-label="প্রোডাক্ট তালিকা">
+      <div id="productsGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5"></div>
 
-  {
-    id: "rj45-1",
-    name: "Transparent RJ45 Connector (Cat6)",
-    category: "rj45",
-    categoryName: "Connector",
-    price: 20,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "Cat6 compatible RJ45 Connector। LAN cable termination-এর জন্য ব্যবহারযোগ্য।",
-    specs: [
-      "Category: Cat6",
-      "Type: RJ45 Connector",
-      "Material: Plastic Body",
-      "Transparent Design",
-      "High Quality"
-    ],
-    images: [
-      "products/rj45-1/Transparent.jpeg"
-    ]
-  },
+      <!-- Empty Search State -->
+      <div id="emptyState" class="hidden glass rounded-3xl p-10 sm:p-14 text-center">
+        <div class="text-5xl mb-3">🔍</div>
+        <h2 class="text-xl font-black">কোনো পণ্য পাওয়া যায়নি</h2>
+        <p class="text-slate-400 text-sm mt-1">অন্য মডেল বা নাম লিখে খুঁজুন, অথবা সব পণ্য দেখুন।</p>
+        <button type="button" onclick="resetAllFilters()" class="mt-5 px-5 py-2.5 rounded-xl bg-cyan-400 text-slate-950 font-black text-sm cursor-pointer">
+          সব পণ্য দেখুন
+        </button>
+      </div>
+    </section>
 
-  {
-    id: "rj45-2",
-    name: "Shielded RJ45 Connector (Cat6)",
-    category: "rj45",
-    categoryName: "Connector",
-    price: 10,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "Shielded Cat6 RJ45 Connector। LAN cable termination-এর জন্য ব্যবহারযোগ্য।",
-    specs: [
-      "Category: Cat6",
-      "Type: Shielded RJ45 Connector",
-      "Metal / Steel Body",
-      "High Quality",
-      "Suitable for Cat6 Cable"
-    ],
-    images: [
-      "products/rj45-2/Shielded.jpeg"
-    ]
-  },
+    <!-- Smart Router Buying Guide -->
+    <section class="glass-strong rounded-3xl p-5 sm:p-7 mt-12">
+      <h2 class="font-display font-bold text-xl sm:text-2xl">🤔 কোন ডিভাইসটি আপনার জন্য সেরা?</h2>
+      <p class="text-slate-400 text-sm mt-1 mb-4">আপনার ইন্টারনেট প্যাকেজ ও বাসার প্রয়োজন অনুযায়ী বেছে নিন:</p>
+      <div class="grid sm:grid-cols-3 gap-3 text-sm">
+        <div class="glass rounded-2xl p-4">
+          <div class="font-bold text-cyan-300 mb-1">৩০ – ৪০ Mbps প্যাকেজ</div>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            সাধারণ ব্যবহার ও ২-৩ রুমের জন্য <b>Tenda F3 / F6</b> বা <b>Mercusys MW325R (300Mbps)</b> বাজেট সেরা।
+          </p>
+        </div>
+        <div class="glass rounded-2xl p-4">
+          <div class="font-bold text-cyan-300 mb-1">৫০ – ১০০ Mbps প্যাকেজ</div>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            পুরো স্পিড, গেমিং ও বাফারিংহীন 4K ভিডিওর জন্য <b>Cudy WR1200 / WR1300</b> বা <b>Ruijie Dual-Band</b> রাউটার নিন।
+          </p>
+        </div>
+        <div class="glass rounded-2xl p-4">
+          <div class="font-bold text-cyan-300 mb-1">কারেন্ট গেলেও ইন্টারনেট</div>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            লোডশেডিংয়ে রাউটার ও ONU একসাথে চালু রাখতে <b>WGP Mini UPS (10400mAh)</b> ব্যবহার করুন।
+          </p>
+        </div>
+      </div>
+    </section>
 
+  </main>
 
-  // =========================================================
-  // UPS / ADAPTER
-  // =========================================================
+  <!-- Footer -->
+  <footer class="border-t border-cyan-400/10 mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 text-center text-sm text-slate-400">
+      <div class="font-display font-extrabold text-slate-100 text-lg">RJ NETWORK | Store</div>
+      <div class="mt-1">প্রোঃ মোঃ রাজু আহম্মেদ</div>
+      <div class="mt-1">📍 ঝাউদিয়া বলফিল্ড মোড়, কুষ্টিয়া সদর, কুষ্টিয়া</div>
+      <div class="mt-1">Hotline: <a href="tel:09639019016" class="text-cyan-300 font-bold">09639-019016</a></div>
+      <div class="flex flex-wrap justify-center gap-4 mt-3 text-xs sm:text-sm font-semibold">
+        <a href="index.html" class="hover:text-cyan-300">হোমপেজ</a>
+        <a href="index.html#packages" class="hover:text-cyan-300">প্যাকেজ ও দাম</a>
+        <a href="index.html#bill" class="hover:text-cyan-300">বিল পরিশোধ</a>
+        <a href="router-login.html" class="hover:text-cyan-300">রাউটার লগইন</a>
+      </div>
+      <div class="mt-4 text-xs text-slate-500">© <span id="year"></span> RJ NETWORK — All rights reserved.</div>
+      <div class="mt-1 text-xs font-bold text-red-500">DEVELOPED BY — RAKIBUL ISLAM RABBI</div>
+    </div>
+  </footer>
 
-  {
-    id: "adapter-1",
-    name: "12V 1A Power Adapter for Router / ONU",
-    category: "adapter",
-    categoryName: "UPS / ADAPTER",
-    price: 250,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "Router ও ONU-এর জন্য 12V 1A DC Power Adapter।",
-    specs: [
-      "Output Voltage: 12V",
-      "Output Current: 1A",
-      "Output Type: DC",
-      "Suitable for Router / ONU",
-      "Indoor Use"
-    ],
-    images: [
-      "products/adapter-1/1.jpeg",
-      "products/adapter-1/2.jpeg"
-    ]
-  },
+  <!-- Mobile Bottom Quick Bar -->
+  <div class="mobile-bar">
+    <a href="tel:09639019016">📞 কল</a>
+    <a href="https://wa.me/8801714019016?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20RJ%20NETWORK%20Store%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%20%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%A1%E0%A6%BE%E0%A6%95%E0%A7%8D%E0%A6%9F%20%E0%A6%95%E0%A6%BF%E0%A6%A8%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" rel="noopener">💬 WhatsApp</a>
+    <button type="button" data-cart-open class="primary">🛒 কার্ট (<span data-cart-count>0</span>)</button>
+  </div>
 
-  {
-    id: "ups-1",
-    name: "WGP Mini UPS for WiFi Router 10400mAh",
-    category: "adapter",
-    categoryName: "UPS / ADAPTER",
-    price: 1799,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "WiFi Router ও networking device-এর backup power-এর জন্য Mini UPS।",
-    specs: [
-      "Brand: WGP",
-      "Battery Capacity: 10400mAh",
-      "Mini UPS for WiFi Router",
-      "Output: 5V / 9V / 12V",
-      "Multiple Voltage Support",
-      "Router Backup Power",
-      "Compact Design"
-    ],
-    images: [
-      "products/ups-1/1.jpeg",
-      "products/ups-1/2.jpeg",
-      "products/ups-1/3.jpeg"
-    ]
-  },
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-  {
-    id: "accessories-1",
-    name: "Multi Layer Wall Mounted Router Stand",
-    category: "accessories",
-    categoryName: "Accessories",
-    price: 450,
-    unit: "পিস",
-    stock: true,
-    badge: "NEW",
-    description:
-      "WiFi Router ও ONU-এর Stand।",
-    specs: [
-      "Type: Multi Layer Wall Mounted Stand",
-      "Suitable for: WiFi Router / ONU",
-      "Mounting: Wall Mount",
-      "Space Saving Design"
-    ],
-    images: [
-      "products/accessories-1/1.jpeg",
-      "products/accessories-1/2.jpeg"
-    ]
-  }
-];
+    const ALL_PRODUCTS = Array.isArray(PRODUCTS) ? PRODUCTS : [];
+    const grid = document.getElementById('productsGrid');
+    const emptyState = document.getElementById('emptyState');
+    const categoryBar = document.getElementById('categoryBar');
+    const searchInput = document.getElementById('searchInput');
+    const sortSelect = document.getElementById('sortSelect');
+    const resultSummary = document.getElementById('resultSummary');
+    const resetFilterBtn = document.getElementById('resetFilterBtn');
+
+    let selectedCategory = 'all';
+
+    function taka(n){ return '৳ ' + Number(n).toLocaleString('en-BD'); }
+    function esc(str){ return String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+    // ক্যাটাগরি লিস্ট (products.js এর category অনুযায়ী)
+    const CATEGORIES = [
+      { id: 'all', label: 'সব পণ্য', icon: '🛍️' },
+      { id: 'router', label: 'রাউটার', icon: '📡' },
+      { id: 'onu', label: 'ONU', icon: '🔌' },
+      { id: 'adapter', label: 'UPS ও Adapter', icon: '🔋' },
+      { id: 'lan', label: 'Cable', icon: '🔗' },
+      { id: 'rj45', label: 'Connector', icon: '🧩' },
+      { id: 'accessories', label: 'Accessories', icon: '🛠️' }
+    ];
+
+    function renderCategories(){
+      categoryBar.innerHTML = CATEGORIES.map(cat => {
+        const count = cat.id === 'all'
+          ? ALL_PRODUCTS.length
+          : ALL_PRODUCTS.filter(p => p.category === cat.id).length;
+        if(cat.id !== 'all' && count === 0) return '';
+        const isActive = selectedCategory === cat.id;
+        return `
+          <button type="button" class="cat-btn ${isActive ? 'active' : ''}" onclick="setCategory('${cat.id}')">
+            <span>${cat.icon}</span>
+            <span>${cat.label}</span>
+            <span class="count">${count}</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    window.setCategory = function(catId){
+      selectedCategory = catId;
+      renderCategories();
+      renderProducts();
+    };
+
+    window.resetAllFilters = function(){
+      selectedCategory = 'all';
+      searchInput.value = '';
+      sortSelect.value = 'default';
+      renderCategories();
+      renderProducts();
+    };
+
+    resetFilterBtn.addEventListener('click', window.resetAllFilters);
+    searchInput.addEventListener('input', renderProducts);
+    sortSelect.addEventListener('change', renderProducts);
+
+    function renderProducts(){
+      const query = searchInput.value.trim().toLowerCase();
+      const sortVal = sortSelect.value;
+
+      let list = ALL_PRODUCTS.filter(p => {
+        const matchCat = selectedCategory === 'all' || p.category === selectedCategory;
+        if(!matchCat) return false;
+        if(!query) return true;
+        const inName = (p.name || '').toLowerCase().includes(query);
+        const inCat = (p.categoryName || '').toLowerCase().includes(query);
+        const inDesc = (p.description || '').toLowerCase().includes(query);
+        const inSpecs = Array.isArray(p.specs) && p.specs.some(s => s.toLowerCase().includes(query));
+        return inName || inCat || inDesc || inSpecs;
+      });
+
+      if(sortVal === 'price-asc'){
+        list = [...list].sort((a, b) => a.price - b.price);
+      } else if(sortVal === 'price-desc'){
+        list = [...list].sort((a, b) => b.price - a.price);
+      }
+
+      const isFiltered = selectedCategory !== 'all' || query !== '' || sortVal !== 'default';
+      resetFilterBtn.classList.toggle('hidden', !isFiltered);
+      resultSummary.textContent = `মোট ${list.length} টি পণ্য দেখানো হচ্ছে`;
+
+      if(!list.length){
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+      emptyState.classList.add('hidden');
+
+      grid.innerHTML = list.map(p => {
+        const imgSrc = (p.images && p.images[0]) ? p.images[0] : 'logo.png';
+        const detailUrl = `product.html?id=${encodeURIComponent(p.id)}`;
+        const topSpecs = Array.isArray(p.specs) ? p.specs.slice(0, 2) : [];
+        const waText = encodeURIComponent(
+          `আসসালামু আলাইকুম RJ NETWORK, আমি এই পণ্যটি অর্ডার করতে চাই:\n📦 ${p.name}\n💰 মূল্য: ${taka(p.price)}\n🔗 ${location.origin}/${detailUrl}`
+        );
+
+        return `
+          <article class="prod-card glass">
+            <a href="${detailUrl}" class="prod-thumb" aria-label="${esc(p.name)}">
+              ${p.badge ? `<span class="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-lg text-[10.5px] font-black ${p.badge.includes('HOT') ? 'bg-gradient-to-r from-amber-400 to-rose-500 text-slate-950' : 'bg-cyan-400 text-slate-950'}">${esc(p.badge)}</span>` : ''}
+              <span class="absolute top-2.5 right-2.5 z-10 px-2 py-0.5 rounded-lg text-[10.5px] font-bold bg-[#030914]/80 border border-white/10 text-cyan-300">
+                ${esc(p.categoryName || '')}
+              </span>
+              <img src="${esc(imgSrc)}" alt="${esc(p.name)}" width="400" height="400" loading="lazy" onerror="this.src='logo.png'">
+            </a>
+
+            <div class="p-3 sm:p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <a href="${detailUrl}" class="hover:text-cyan-300 transition">
+                  <h3 class="font-bold text-sm sm:text-[15.5px] leading-snug line-clamp-2">${esc(p.name)}</h3>
+                </a>
+
+                ${topSpecs.length ? `
+                  <div class="flex flex-wrap gap-1 mt-2">
+                    ${topSpecs.map(s => `<span class="spec-pill">${esc(s)}</span>`).join('')}
+                  </div>
+                ` : ''}
+              </div>
+
+              <div class="mt-3 pt-2.5 border-t border-white/10">
+                <div class="flex items-center justify-between gap-1 mb-2.5">
+                  <div>
+                    <span class="text-lg sm:text-xl font-black text-cyan-300">${taka(p.price)}</span>
+                    ${p.unit ? `<span class="text-[11px] text-slate-400"> / ${esc(p.unit)}</span>` : ''}
+                  </div>
+                  <span class="text-[11px] font-bold ${p.stock ? 'text-emerald-400' : 'text-rose-400'}">
+                    ${p.stock ? '● ইন স্টক' : '● স্টক শেষ'}
+                  </span>
+                </div>
+
+                <!-- cart.js এর Add to Cart হুক -->
+                <div data-cart-actions="${esc(p.id)}" data-size="sm" class="mb-2"></div>
+
+                <!-- Direct Buy Now + WhatsApp -->
+                <div class="grid grid-cols-2 gap-1.5">
+                  <button type="button" onclick="window.Cart && Cart.buyNow('${esc(p.id)}')" ${!p.stock ? 'disabled' : ''}
+                    class="order-btn rounded-xl py-2 px-2 text-xs text-center ${!p.stock ? 'opacity-50 cursor-not-allowed' : ''}">
+                    অর্ডার করুন
+                  </button>
+                  <a href="https://wa.me/8801714019016?text=${waText}" target="_blank" rel="noopener"
+                    class="wa-btn rounded-xl py-2 px-2 text-xs text-center inline-flex items-center justify-center gap-1">
+                    💬 WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      // ডাইনামিক কার্ড রেন্ডার হওয়ার পর cart.js বাটনগুলো রি-ইনিশিয়ালাইজ করার জন্য
+      if(window.Cart && typeof Cart.refresh === 'function') Cart.refresh();
+      else if(window.Cart && typeof Cart.init === 'function') Cart.init();
+    }
+
+    // URL-এ ?cat=router থাকলে অটো সিলেক্ট হবে
+    const urlCat = new URLSearchParams(location.search).get('cat');
+    if(urlCat && CATEGORIES.some(c => c.id === urlCat)) selectedCategory = urlCat;
+
+    renderCategories();
+    renderProducts();
+  </script>
+</body>
+</html>
